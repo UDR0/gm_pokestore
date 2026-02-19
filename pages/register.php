@@ -1,0 +1,8 @@
+<h1>Inscription à GM Poke'Store</h1>
+
+<form method="POST" action="actions/register_action.php">
+    <input type="text" name="username" placeholder="Nom d'utilisateur" required><br><br>
+    <input type="email" name="email" placeholder="Email" required><br><br>
+    <input type="password" name="password" placeholder="Mot de passe" required><br><br>
+    <button type="submit">Créer mon compte</button>
+</form>

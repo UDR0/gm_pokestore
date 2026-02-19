@@ -1,0 +1,2392 @@
+[
+    {
+        "pokedex_id": 1,
+        "name": "bulbasaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Au matin de sa vie, la graine sur son dos lui fournit les \u00e9l\u00e9ments dont il a besoin pour grandir.",
+        "weight_kg": 6.9,
+        "height_m": 0.7,
+        "evolutions": [
+            "bulbasaur",
+            "ivysaur",
+            "venusaur"
+        ],
+        "price_eur": 69
+    },
+    {
+        "pokedex_id": 2,
+        "name": "ivysaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Lorsque le bourgeon sur son dos \u00e9clot, il r\u00e9pand un doux parfum pour c\u00e9l\u00e9brer sa floraison.",
+        "weight_kg": 13,
+        "height_m": 1,
+        "evolutions": [
+            "bulbasaur",
+            "ivysaur",
+            "venusaur"
+        ],
+        "price_eur": 78
+    },
+    {
+        "pokedex_id": 3,
+        "name": "venusaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Le parfum de sa fleur se fait plus p\u00e9n\u00e9trant les lendemains de pluie. Cela app\u00e2te les autres Pok\u00e9mon.",
+        "weight_kg": 100,
+        "height_m": 2,
+        "evolutions": [
+            "bulbasaur",
+            "ivysaur",
+            "venusaur"
+        ],
+        "price_eur": 87
+    },
+    {
+        "pokedex_id": 4,
+        "name": "charmander",
+        "types": [
+            "fire"
+        ],
+        "description": "La flamme de sa queue symbolise sa vitalit\u00e9. Elle est intense quand il est en bonne sant\u00e9.",
+        "weight_kg": 8.5,
+        "height_m": 0.6,
+        "evolutions": [
+            "charmander",
+            "charmeleon",
+            "charizard"
+        ],
+        "price_eur": 136
+    },
+    {
+        "pokedex_id": 5,
+        "name": "charmeleon",
+        "types": [
+            "fire"
+        ],
+        "description": "La nuit, la queue ardente du Reptincel brille comme une \u00e9toile dans son repaire montagneux.",
+        "weight_kg": 19,
+        "height_m": 1.1,
+        "evolutions": [
+            "charmander",
+            "charmeleon",
+            "charizard"
+        ],
+        "price_eur": 145
+    },
+    {
+        "pokedex_id": 6,
+        "name": "charizard",
+        "types": [
+            "fire",
+            "flying"
+        ],
+        "description": "On raconte que la flamme du Dracaufeu s\u2019intensifie apr\u00e8s un combat difficile.",
+        "weight_kg": 90.5,
+        "height_m": 1.7,
+        "evolutions": [
+            "charmander",
+            "charmeleon",
+            "charizard"
+        ],
+        "price_eur": 154
+    },
+    {
+        "pokedex_id": 7,
+        "name": "squirtle",
+        "types": [
+            "water"
+        ],
+        "description": "Il se r\u00e9fugie dans sa carapace et r\u00e9plique en \u00e9claboussant l\u2019ennemi \u00e0 la premi\u00e8re occasion.",
+        "weight_kg": 9,
+        "height_m": 0.5,
+        "evolutions": [
+            "squirtle",
+            "wartortle",
+            "blastoise"
+        ],
+        "price_eur": 148
+    },
+    {
+        "pokedex_id": 8,
+        "name": "wartortle",
+        "types": [
+            "water"
+        ],
+        "description": "On pr\u00e9tend qu\u2019il vit 10 000 ans. Sa queue duveteuse est un symbole de long\u00e9vit\u00e9 populaire.",
+        "weight_kg": 22.5,
+        "height_m": 1,
+        "evolutions": [
+            "squirtle",
+            "wartortle",
+            "blastoise"
+        ],
+        "price_eur": 157
+    },
+    {
+        "pokedex_id": 9,
+        "name": "blastoise",
+        "types": [
+            "water"
+        ],
+        "description": "Les trombes d\u2019eau projet\u00e9es par les canons de sa carapace peuvent percer le m\u00e9tal le plus r\u00e9sistant.",
+        "weight_kg": 85.5,
+        "height_m": 1.6,
+        "evolutions": [
+            "squirtle",
+            "wartortle",
+            "blastoise"
+        ],
+        "price_eur": 166
+    },
+    {
+        "pokedex_id": 10,
+        "name": "caterpie",
+        "types": [
+            "bug"
+        ],
+        "description": "Ses antennes rouges lib\u00e8rent une puanteur qui repousse l\u2019ennemi. Il grandit par mues r\u00e9guli\u00e8res.",
+        "weight_kg": 2.9,
+        "height_m": 0.3,
+        "evolutions": [
+            "caterpie",
+            "metapod",
+            "butterfree"
+        ],
+        "price_eur": 150
+    },
+    {
+        "pokedex_id": 11,
+        "name": "metapod",
+        "types": [
+            "bug"
+        ],
+        "description": "Son corps fr\u00eale est prot\u00e9g\u00e9 par sa carapace d\u2019acier. Il encaisse les coups durs en attendant d\u2019\u00e9voluer.",
+        "weight_kg": 9.9,
+        "height_m": 0.7,
+        "evolutions": [
+            "caterpie",
+            "metapod",
+            "butterfree"
+        ],
+        "price_eur": 159
+    },
+    {
+        "pokedex_id": 12,
+        "name": "butterfree",
+        "types": [
+            "bug",
+            "flying"
+        ],
+        "description": "Il raffole du nectar des fleurs. Il est capable de rep\u00e9rer la plus petite quantit\u00e9 de pollen.",
+        "weight_kg": 32,
+        "height_m": 1.1,
+        "evolutions": [
+            "caterpie",
+            "metapod",
+            "butterfree"
+        ],
+        "price_eur": 168
+    },
+    {
+        "pokedex_id": 13,
+        "name": "weedle",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "description": "Il mange chaque jour son poids en feuilles. Il utilise l\u2019aiguillon sur sa t\u00eate pour repousser l\u2019ennemi.",
+        "weight_kg": 3.2,
+        "height_m": 0.3,
+        "evolutions": [
+            "weedle",
+            "kakuna",
+            "beedrill"
+        ],
+        "price_eur": 177
+    },
+    {
+        "pokedex_id": 14,
+        "name": "kakuna",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "description": "Il se cache sous les feuilles et les branches pour fuir les pr\u00e9dateurs en attendant d\u2019\u00e9voluer.",
+        "weight_kg": 10,
+        "height_m": 0.6,
+        "evolutions": [
+            "weedle",
+            "kakuna",
+            "beedrill"
+        ],
+        "price_eur": 186
+    },
+    {
+        "pokedex_id": 15,
+        "name": "beedrill",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "description": "Il virevolte rapidement autour de l\u2019ennemi et frappe de son dard empoisonn\u00e9 avant de d\u00e9camper.",
+        "weight_kg": 29.5,
+        "height_m": 1,
+        "evolutions": [
+            "weedle",
+            "kakuna",
+            "beedrill"
+        ],
+        "price_eur": 195
+    },
+    {
+        "pokedex_id": 16,
+        "name": "pidgey",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Ce Pok\u00e9mon docile pr\u00e9f\u00e8re \u00e9viter le combat. Toutefois, il se montre tr\u00e8s f\u00e9roce quand on l\u2019agresse.",
+        "weight_kg": 1.8,
+        "height_m": 0.3,
+        "evolutions": [
+            "pidgey",
+            "pidgeotto",
+            "pidgeot"
+        ],
+        "price_eur": 204
+    },
+    {
+        "pokedex_id": 17,
+        "name": "pidgeotto",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Il survole son vaste territoire en qu\u00eate d\u2019une proie avant de fondre sur elle toutes griffes en avant.",
+        "weight_kg": 30,
+        "height_m": 1.1,
+        "evolutions": [
+            "pidgey",
+            "pidgeotto",
+            "pidgeot"
+        ],
+        "price_eur": 213
+    },
+    {
+        "pokedex_id": 18,
+        "name": "pidgeot",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "En battant des ailes de toutes ses forces, Roucarnage g\u00e9n\u00e8re une rafale \u00e0 en d\u00e9raciner les arbres.",
+        "weight_kg": 39.5,
+        "height_m": 1.5,
+        "evolutions": [
+            "pidgey",
+            "pidgeotto",
+            "pidgeot"
+        ],
+        "price_eur": 222
+    },
+    {
+        "pokedex_id": 19,
+        "name": "rattata",
+        "types": [
+            "normal"
+        ],
+        "description": "D\u2019une prudence extr\u00eame, sa nature robuste lui permet de s\u2019adapter \u00e0 tous les terrains.",
+        "weight_kg": 3.5,
+        "height_m": 0.3,
+        "evolutions": [
+            "rattata",
+            "raticate"
+        ],
+        "price_eur": 231
+    },
+    {
+        "pokedex_id": 20,
+        "name": "raticate",
+        "types": [
+            "normal"
+        ],
+        "description": "Ses pattes arri\u00e8re lui permettent de traverser les rivi\u00e8res. Il est toujours en qu\u00eate de nourriture.",
+        "weight_kg": 18.5,
+        "height_m": 0.7,
+        "evolutions": [
+            "rattata",
+            "raticate"
+        ],
+        "price_eur": 240
+    },
+    {
+        "pokedex_id": 21,
+        "name": "spearow",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Il fait battre vigoureusement ses petites ailes pour voler et cherche \u00e0 manger dans l\u2019herbe avec le bec.",
+        "weight_kg": 2,
+        "height_m": 0.3,
+        "evolutions": [
+            "spearow",
+            "fearow"
+        ],
+        "price_eur": 249
+    },
+    {
+        "pokedex_id": 22,
+        "name": "fearow",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Il a assez d\u2019\u00e9nergie pour voler toute la journ\u00e9e avec ses grandes ailes. Il frappe de son bec ac\u00e9r\u00e9.",
+        "weight_kg": 38,
+        "height_m": 1.2,
+        "evolutions": [
+            "spearow",
+            "fearow"
+        ],
+        "price_eur": 258
+    },
+    {
+        "pokedex_id": 23,
+        "name": "ekans",
+        "types": [
+            "poison"
+        ],
+        "description": "Il se faufile dans l\u2019herbe sans un bruit et frappe dans le dos quand sa proie s\u2019y attend le moins.",
+        "weight_kg": 6.9,
+        "height_m": 2,
+        "evolutions": [
+            "ekans",
+            "arbok"
+        ],
+        "price_eur": 267
+    },
+    {
+        "pokedex_id": 24,
+        "name": "arbok",
+        "types": [
+            "poison"
+        ],
+        "description": "Il utilise la marque sur son ventre pour intimider l\u2019ennemi. Il \u00e9touffe l\u2019ennemi p\u00e9trifi\u00e9 par la peur.",
+        "weight_kg": 65,
+        "height_m": 3.5,
+        "evolutions": [
+            "ekans",
+            "arbok"
+        ],
+        "price_eur": 276
+    },
+    {
+        "pokedex_id": 25,
+        "name": "pikachu",
+        "types": [
+            "electric"
+        ],
+        "description": "Il lui arrive de remettre d\u2019aplomb un Pikachu alli\u00e9 en lui envoyant une d\u00e9charge \u00e9lectrique.",
+        "weight_kg": 6,
+        "height_m": 0.4,
+        "evolutions": [
+            "pichu",
+            "pikachu",
+            "raichu"
+        ],
+        "price_eur": 320
+    },
+    {
+        "pokedex_id": 26,
+        "name": "raichu",
+        "types": [
+            "electric"
+        ],
+        "description": "Il se prot\u00e8ge des d\u00e9charges gr\u00e2ce \u00e0 sa queue qui dissipe l\u2019\u00e9lectricit\u00e9 dans le sol.",
+        "weight_kg": 30,
+        "height_m": 0.8,
+        "evolutions": [
+            "pichu",
+            "pikachu",
+            "raichu"
+        ],
+        "price_eur": 329
+    },
+    {
+        "pokedex_id": 27,
+        "name": "sandshrew",
+        "types": [
+            "ground"
+        ],
+        "description": "Il vit sur des terres arides \u00e9pargn\u00e9es par la pluie. Il se roule en boule pour se prot\u00e9ger.",
+        "weight_kg": 12,
+        "height_m": 0.6,
+        "evolutions": [
+            "sandshrew",
+            "sandslash"
+        ],
+        "price_eur": 62
+    },
+    {
+        "pokedex_id": 28,
+        "name": "sandslash",
+        "types": [
+            "ground"
+        ],
+        "description": "Il se met en boule pour percuter l\u2019ennemi. Ses \u00e9pines aiguis\u00e9es font beaucoup de d\u00e9g\u00e2ts.",
+        "weight_kg": 29.5,
+        "height_m": 1,
+        "evolutions": [
+            "sandshrew",
+            "sandslash"
+        ],
+        "price_eur": 71
+    },
+    {
+        "pokedex_id": 29,
+        "name": "nidoran-f",
+        "types": [
+            "poison"
+        ],
+        "description": "Bien qu\u2019il rechigne \u00e0 se battre, une goutte du poison s\u00e9cr\u00e9t\u00e9 par ses piquants peut s\u2019av\u00e9rer fatale.",
+        "weight_kg": 7,
+        "height_m": 0.4,
+        "evolutions": [
+            "nidoran-f",
+            "nidorina",
+            "nidoqueen"
+        ],
+        "price_eur": 80
+    },
+    {
+        "pokedex_id": 30,
+        "name": "nidorina",
+        "types": [
+            "poison"
+        ],
+        "description": "Ce Pok\u00e9mon dresse ses piquants en cas de danger. Ils poussent moins vite que ceux de Nidorino.",
+        "weight_kg": 20,
+        "height_m": 0.8,
+        "evolutions": [
+            "nidoran-f",
+            "nidorina",
+            "nidoqueen"
+        ],
+        "price_eur": 89
+    },
+    {
+        "pokedex_id": 31,
+        "name": "nidoqueen",
+        "types": [
+            "poison",
+            "ground"
+        ],
+        "description": "Son corps est recouvert d\u2019\u00e9cailles solides. Il donnera sa vie pour secourir les petits de son terrier.",
+        "weight_kg": 60,
+        "height_m": 1.3,
+        "evolutions": [
+            "nidoran-f",
+            "nidorina",
+            "nidoqueen"
+        ],
+        "price_eur": 98
+    },
+    {
+        "pokedex_id": 32,
+        "name": "nidoran-m",
+        "types": [
+            "poison"
+        ],
+        "description": "Il jauge le terrain en laissant ses oreilles d\u00e9passer de l\u2019herbe. Il se d\u00e9fend avec sa corne toxique.",
+        "weight_kg": 9,
+        "height_m": 0.5,
+        "evolutions": [
+            "nidoran-m",
+            "nidorino",
+            "nidoking"
+        ],
+        "price_eur": 107
+    },
+    {
+        "pokedex_id": 33,
+        "name": "nidorino",
+        "types": [
+            "poison"
+        ],
+        "description": "D\u2019un temp\u00e9rament violent, il empale l\u2019ennemi sur sa corne qui distille un poison puissant.",
+        "weight_kg": 19.5,
+        "height_m": 0.9,
+        "evolutions": [
+            "nidoran-m",
+            "nidorino",
+            "nidoking"
+        ],
+        "price_eur": 116
+    },
+    {
+        "pokedex_id": 34,
+        "name": "nidoking",
+        "types": [
+            "poison",
+            "ground"
+        ],
+        "description": "Un coup de sa puissante queue peut briser un poteau t\u00e9l\u00e9phonique comme une allumette.",
+        "weight_kg": 62,
+        "height_m": 1.4,
+        "evolutions": [
+            "nidoran-m",
+            "nidorino",
+            "nidoking"
+        ],
+        "price_eur": 125
+    },
+    {
+        "pokedex_id": 35,
+        "name": "clefairy",
+        "types": [
+            "fairy"
+        ],
+        "description": "On dit que ceux qui voient danser un groupe de M\u00e9lof\u00e9e sous la pleine lune conna\u00eetront un grand bonheur.",
+        "weight_kg": 7.5,
+        "height_m": 0.6,
+        "evolutions": [
+            "cleffa",
+            "clefairy",
+            "clefable"
+        ],
+        "price_eur": 134
+    },
+    {
+        "pokedex_id": 36,
+        "name": "clefable",
+        "types": [
+            "fairy"
+        ],
+        "description": "Il est tr\u00e8s farouche et se laisse rarement approcher. De plus, il d\u00e9tecte les sons \u00e0 plus d\u20191 km.",
+        "weight_kg": 40,
+        "height_m": 1.3,
+        "evolutions": [
+            "cleffa",
+            "clefairy",
+            "clefable"
+        ],
+        "price_eur": 143
+    },
+    {
+        "pokedex_id": 37,
+        "name": "vulpix",
+        "types": [
+            "fire"
+        ],
+        "description": "Il envoie des boules de feu. Avec l\u2019\u00e2ge, ses six queues en forment de nouvelles.",
+        "weight_kg": 9.9,
+        "height_m": 0.6,
+        "evolutions": [
+            "vulpix",
+            "ninetales"
+        ],
+        "price_eur": 192
+    },
+    {
+        "pokedex_id": 38,
+        "name": "ninetales",
+        "types": [
+            "fire"
+        ],
+        "description": "On raconte que ses neuf queues d\u00e9tiennent un pouvoir mystique. Il peut vivre pendant mille ans.",
+        "weight_kg": 19.9,
+        "height_m": 1.1,
+        "evolutions": [
+            "vulpix",
+            "ninetales"
+        ],
+        "price_eur": 201
+    },
+    {
+        "pokedex_id": 39,
+        "name": "jigglypuff",
+        "types": [
+            "normal",
+            "fairy"
+        ],
+        "description": "Lorsqu\u2019il roule ses grands yeux ronds, il entonne une berceuse qui endort son auditoire.",
+        "weight_kg": 5.5,
+        "height_m": 0.5,
+        "evolutions": [
+            "igglybuff",
+            "jigglypuff",
+            "wigglytuff"
+        ],
+        "price_eur": 170
+    },
+    {
+        "pokedex_id": 40,
+        "name": "wigglytuff",
+        "types": [
+            "normal",
+            "fairy"
+        ],
+        "description": "Sa fourrure est d\u2019une douceur incomparable au toucher. Il peut gonfler en aspirant de l\u2019air.",
+        "weight_kg": 12,
+        "height_m": 1,
+        "evolutions": [
+            "igglybuff",
+            "jigglypuff",
+            "wigglytuff"
+        ],
+        "price_eur": 179
+    },
+    {
+        "pokedex_id": 41,
+        "name": "zubat",
+        "types": [
+            "poison",
+            "flying"
+        ],
+        "description": "D\u00e9pourvu d\u2019yeux, il se rep\u00e8re dans l\u2019espace gr\u00e2ce aux ultrasons qu\u2019il \u00e9met avec sa bouche.",
+        "weight_kg": 7.5,
+        "height_m": 0.8,
+        "evolutions": [
+            "zubat",
+            "golbat",
+            "crobat"
+        ],
+        "price_eur": 188
+    },
+    {
+        "pokedex_id": 42,
+        "name": "golbat",
+        "types": [
+            "poison",
+            "flying"
+        ],
+        "description": "Ses crocs ac\u00e9r\u00e9s et creux peuvent p\u00e9n\u00e9trer la plus \u00e9paisse des peaux et sucer le sang de la victime.",
+        "weight_kg": 55,
+        "height_m": 1.6,
+        "evolutions": [
+            "zubat",
+            "golbat",
+            "crobat"
+        ],
+        "price_eur": 197
+    },
+    {
+        "pokedex_id": 43,
+        "name": "oddish",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "En journ\u00e9e, il plante ses pieds-racines dans le sol. La nuit, il se prom\u00e8ne en semant des graines.",
+        "weight_kg": 5.4,
+        "height_m": 0.5,
+        "evolutions": [
+            "oddish",
+            "gloom",
+            "vileplume"
+        ],
+        "price_eur": 206
+    },
+    {
+        "pokedex_id": 44,
+        "name": "gloom",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "L\u2019odeur du nectar de sa bouche est si r\u00e9pugnante qu\u2019elle agresse les narines \u00e0 deux kilom\u00e8tres.",
+        "weight_kg": 8.6,
+        "height_m": 0.8,
+        "evolutions": [
+            "oddish",
+            "gloom",
+            "vileplume"
+        ],
+        "price_eur": 215
+    },
+    {
+        "pokedex_id": 45,
+        "name": "vileplume",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Ses p\u00e9tales sont les plus grands du monde. Il marche en r\u00e9pandant un pollen extr\u00eamement allerg\u00e8ne.",
+        "weight_kg": 18.6,
+        "height_m": 1.2,
+        "evolutions": [
+            "oddish",
+            "gloom",
+            "vileplume"
+        ],
+        "price_eur": 224
+    },
+    {
+        "pokedex_id": 46,
+        "name": "paras",
+        "types": [
+            "bug",
+            "grass"
+        ],
+        "description": "Des champignons appel\u00e9s \u201ctochukaso\u201d poussent sur son dos. Ils \u00e9voluent avec le Paras h\u00f4te.",
+        "weight_kg": 5.4,
+        "height_m": 0.3,
+        "evolutions": [
+            "paras",
+            "parasect"
+        ],
+        "price_eur": 233
+    },
+    {
+        "pokedex_id": 47,
+        "name": "parasect",
+        "types": [
+            "bug",
+            "grass"
+        ],
+        "description": "Un champignon parasite plus gros que Parasect contr\u00f4le son corps. Il r\u00e9pand des spores empoisonn\u00e9es.",
+        "weight_kg": 29.5,
+        "height_m": 1,
+        "evolutions": [
+            "paras",
+            "parasect"
+        ],
+        "price_eur": 242
+    },
+    {
+        "pokedex_id": 48,
+        "name": "venonat",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "description": "Ses grands yeux sont en fait des amas d\u2019yeux minuscules. La nuit, il est attir\u00e9 par la lumi\u00e8re.",
+        "weight_kg": 30,
+        "height_m": 1,
+        "evolutions": [
+            "venonat",
+            "venomoth"
+        ],
+        "price_eur": 251
+    },
+    {
+        "pokedex_id": 49,
+        "name": "venomoth",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "description": "Il r\u00e9pand ses \u00e9cailles poudreuses en battant des ailes. Elles sont toxiques au toucher.",
+        "weight_kg": 12.5,
+        "height_m": 1.5,
+        "evolutions": [
+            "venonat",
+            "venomoth"
+        ],
+        "price_eur": 260
+    },
+    {
+        "pokedex_id": 50,
+        "name": "diglett",
+        "types": [
+            "ground"
+        ],
+        "description": "Un Pok\u00e9mon qui vit sous terre. Habitu\u00e9 aux souterrains, il fuit la lumi\u00e8re du jour.",
+        "weight_kg": 0.8,
+        "height_m": 0.2,
+        "evolutions": [
+            "diglett",
+            "dugtrio"
+        ],
+        "price_eur": 269
+    },
+    {
+        "pokedex_id": 51,
+        "name": "dugtrio",
+        "types": [
+            "ground"
+        ],
+        "description": "Ses trois t\u00eates creusent le sol \u00e0 tour de r\u00f4le. Il peut atteindre des profondeurs de 100 kilom\u00e8tres.",
+        "weight_kg": 33.3,
+        "height_m": 0.7,
+        "evolutions": [
+            "diglett",
+            "dugtrio"
+        ],
+        "price_eur": 278
+    },
+    {
+        "pokedex_id": 52,
+        "name": "meowth",
+        "types": [
+            "normal"
+        ],
+        "description": "Son regard s\u2019anime \u00e0 la vue d\u2019un objet brillant. C\u2019est un Pok\u00e9mon nocturne.",
+        "weight_kg": 4.2,
+        "height_m": 0.4,
+        "evolutions": [
+            "meowth",
+            "persian"
+        ],
+        "price_eur": 287
+    },
+    {
+        "pokedex_id": 53,
+        "name": "persian",
+        "types": [
+            "normal"
+        ],
+        "description": "Un Pok\u00e9mon tr\u00e8s snob. La taille du joyau qui orne son front alimente bien des d\u00e9bats parmi ses fans.",
+        "weight_kg": 32,
+        "height_m": 1,
+        "evolutions": [
+            "meowth",
+            "persian"
+        ],
+        "price_eur": 296
+    },
+    {
+        "pokedex_id": 54,
+        "name": "psyduck",
+        "types": [
+            "water"
+        ],
+        "description": "Ses pouvoirs d\u00e9concertants et myst\u00e9rieux lui font subir de constantes migraines.",
+        "weight_kg": 19.6,
+        "height_m": 0.8,
+        "evolutions": [
+            "psyduck",
+            "golduck"
+        ],
+        "price_eur": 89
+    },
+    {
+        "pokedex_id": 55,
+        "name": "golduck",
+        "types": [
+            "water"
+        ],
+        "description": "Ses membres palm\u00e9s et son corps parfaitement adapt\u00e9 font de lui un nageur exceptionnel.",
+        "weight_kg": 76.6,
+        "height_m": 1.7,
+        "evolutions": [
+            "psyduck",
+            "golduck"
+        ],
+        "price_eur": 98
+    },
+    {
+        "pokedex_id": 56,
+        "name": "mankey",
+        "types": [
+            "fighting"
+        ],
+        "description": "Ils vivent en colonies sylvestres. Quand un F\u00e9rosinge s\u2019\u00e9nerve, toute la colonie suit son exemple.",
+        "weight_kg": 28,
+        "height_m": 0.5,
+        "evolutions": [
+            "mankey",
+            "primeape",
+            "annihilape"
+        ],
+        "price_eur": 82
+    },
+    {
+        "pokedex_id": 57,
+        "name": "primeape",
+        "types": [
+            "fighting"
+        ],
+        "description": "Il grogne quand on le toise, rugit quand on s\u2019enfuit et devient fou de rage quand on le frappe.",
+        "weight_kg": 32,
+        "height_m": 1,
+        "evolutions": [
+            "mankey",
+            "primeape",
+            "annihilape"
+        ],
+        "price_eur": 91
+    },
+    {
+        "pokedex_id": 58,
+        "name": "growlithe",
+        "types": [
+            "fire"
+        ],
+        "description": "Un Pok\u00e9mon tr\u00e8s loyal. Il restera immobile jusqu\u2019\u00e0 ce que son Dresseur lui donne un ordre.",
+        "weight_kg": 19,
+        "height_m": 0.7,
+        "evolutions": [
+            "growlithe",
+            "arcanine"
+        ],
+        "price_eur": 140
+    },
+    {
+        "pokedex_id": 59,
+        "name": "arcanine",
+        "types": [
+            "fire"
+        ],
+        "description": "Son port altier et son attitude fi\u00e8re ont depuis longtemps conquis le c\u0153ur des hommes.",
+        "weight_kg": 155,
+        "height_m": 1.9,
+        "evolutions": [
+            "growlithe",
+            "arcanine"
+        ],
+        "price_eur": 149
+    },
+    {
+        "pokedex_id": 60,
+        "name": "poliwag",
+        "types": [
+            "water"
+        ],
+        "description": "Sa peau est si mince qu\u2019on voit ses organes internes. Il tient \u00e0 peine sur ses nouveaux pieds.",
+        "weight_kg": 12.4,
+        "height_m": 0.6,
+        "evolutions": [
+            "poliwag",
+            "poliwhirl",
+            "poliwrath"
+        ],
+        "price_eur": 143
+    },
+    {
+        "pokedex_id": 61,
+        "name": "poliwhirl",
+        "types": [
+            "water"
+        ],
+        "description": "La spirale qui orne son ventre ondule doucement. Celui qui la fixe est saisi d\u2019une \u00e9trange torpeur.",
+        "weight_kg": 20,
+        "height_m": 1,
+        "evolutions": [
+            "poliwag",
+            "poliwhirl",
+            "poliwrath"
+        ],
+        "price_eur": 152
+    },
+    {
+        "pokedex_id": 62,
+        "name": "poliwrath",
+        "types": [
+            "water",
+            "fighting"
+        ],
+        "description": "Il poss\u00e8de de sacr\u00e9s biscoteaux. Il peut parcourir sans rel\u00e2che l\u2019Oc\u00e9an Pacifique.",
+        "weight_kg": 54,
+        "height_m": 1.3,
+        "evolutions": [
+            "poliwag",
+            "poliwhirl",
+            "poliwrath"
+        ],
+        "price_eur": 161
+    },
+    {
+        "pokedex_id": 63,
+        "name": "abra",
+        "types": [
+            "psychic"
+        ],
+        "description": "L\u2019utilisation de ses pouvoirs mentaux le fatigue tellement qu\u2019il dort 18 heures par jour.",
+        "weight_kg": 19.5,
+        "height_m": 0.9,
+        "evolutions": [
+            "abra",
+            "kadabra",
+            "alakazam"
+        ],
+        "price_eur": 205
+    },
+    {
+        "pokedex_id": 64,
+        "name": "kadabra",
+        "types": [
+            "psychic"
+        ],
+        "description": "Il fixe sa cuill\u00e8re d\u2019argent afin de concentrer son esprit et d\u2019\u00e9mettre un maximum d\u2019ondes alpha.",
+        "weight_kg": 56.5,
+        "height_m": 1.3,
+        "evolutions": [
+            "abra",
+            "kadabra",
+            "alakazam"
+        ],
+        "price_eur": 214
+    },
+    {
+        "pokedex_id": 65,
+        "name": "alakazam",
+        "types": [
+            "psychic"
+        ],
+        "description": "On dit que les cuill\u00e8res qu\u2019il tient en permanence ont \u00e9t\u00e9 cr\u00e9\u00e9es par la puissance de son esprit.",
+        "weight_kg": 48,
+        "height_m": 1.5,
+        "evolutions": [
+            "abra",
+            "kadabra",
+            "alakazam"
+        ],
+        "price_eur": 223
+    },
+    {
+        "pokedex_id": 66,
+        "name": "machop",
+        "types": [
+            "fighting"
+        ],
+        "description": "Malgr\u00e9 sa petite taille, sa force lui permet de soulever plusieurs Racaillou \u00e0 la fois.",
+        "weight_kg": 19.5,
+        "height_m": 0.8,
+        "evolutions": [
+            "machop",
+            "machoke",
+            "machamp"
+        ],
+        "price_eur": 172
+    },
+    {
+        "pokedex_id": 67,
+        "name": "machoke",
+        "types": [
+            "fighting"
+        ],
+        "description": "Il soul\u00e8ve les plus lourdes charges avec plaisir et facilit\u00e9. Il donne un coup de main tout en s\u2019entra\u00eenant!",
+        "weight_kg": 70.5,
+        "height_m": 1.5,
+        "evolutions": [
+            "machop",
+            "machoke",
+            "machamp"
+        ],
+        "price_eur": 181
+    },
+    {
+        "pokedex_id": 68,
+        "name": "machamp",
+        "types": [
+            "fighting"
+        ],
+        "description": "La puissance et la rapidit\u00e9 de ses quatre bras puissants font des ravages sur ses adversaires.",
+        "weight_kg": 130,
+        "height_m": 1.6,
+        "evolutions": [
+            "machop",
+            "machoke",
+            "machamp"
+        ],
+        "price_eur": 190
+    },
+    {
+        "pokedex_id": 69,
+        "name": "bellsprout",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Il pr\u00e9f\u00e8re les climats chauds et humides. Ses lianes peuvent capturer une proie en un clin d\u2019\u0153il.",
+        "weight_kg": 4,
+        "height_m": 0.7,
+        "evolutions": [
+            "bellsprout",
+            "weepinbell",
+            "victreebel"
+        ],
+        "price_eur": 199
+    },
+    {
+        "pokedex_id": 70,
+        "name": "weepinbell",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Un Pok\u00e9mon v\u00e9g\u00e9tal. Il capture les proies \u00e9tourdies en les endormant \u00e0 l\u2019aide d\u2019une poudre toxique.",
+        "weight_kg": 6.4,
+        "height_m": 1,
+        "evolutions": [
+            "bellsprout",
+            "weepinbell",
+            "victreebel"
+        ],
+        "price_eur": 208
+    },
+    {
+        "pokedex_id": 71,
+        "name": "victreebel",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "description": "Sa bouche s\u00e9cr\u00e8te un fluide \u00e0 l\u2019odeur de miel, qui s\u2019av\u00e8re \u00eatre un acide extr\u00eamement corrosif.",
+        "weight_kg": 15.5,
+        "height_m": 1.7,
+        "evolutions": [
+            "bellsprout",
+            "weepinbell",
+            "victreebel"
+        ],
+        "price_eur": 217
+    },
+    {
+        "pokedex_id": 72,
+        "name": "tentacool",
+        "types": [
+            "water",
+            "poison"
+        ],
+        "description": "Presque enti\u00e8rement compos\u00e9 d\u2019eau, son corps a tendance \u00e0 se dess\u00e9cher sur la terre ferme.",
+        "weight_kg": 45.5,
+        "height_m": 0.9,
+        "evolutions": [
+            "tentacool",
+            "tentacruel"
+        ],
+        "price_eur": 251
+    },
+    {
+        "pokedex_id": 73,
+        "name": "tentacruel",
+        "types": [
+            "water",
+            "poison"
+        ],
+        "description": "Ses 80 tentacules lui permettent d\u2019emprisonner ses adversaires dans un redoutable filet venimeux.",
+        "weight_kg": 55,
+        "height_m": 1.6,
+        "evolutions": [
+            "tentacool",
+            "tentacruel"
+        ],
+        "price_eur": 260
+    },
+    {
+        "pokedex_id": 74,
+        "name": "geodude",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "description": "Au repos, rien ne le distingue d\u2019un vulgaire caillou. Malheur \u00e0 ceux qui lui marchent dessus par m\u00e9garde!",
+        "weight_kg": 20,
+        "height_m": 0.4,
+        "evolutions": [
+            "geodude",
+            "graveler",
+            "golem"
+        ],
+        "price_eur": 244
+    },
+    {
+        "pokedex_id": 75,
+        "name": "graveler",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "description": "Il d\u00e9vale les montagnes pour se d\u00e9placer. Une fois qu\u2019il a pris tout son \u00e9lan, dur dur de l\u2019arr\u00eater!",
+        "weight_kg": 105,
+        "height_m": 1,
+        "evolutions": [
+            "geodude",
+            "graveler",
+            "golem"
+        ],
+        "price_eur": 253
+    },
+    {
+        "pokedex_id": 76,
+        "name": "golem",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "description": "Aucun explosif ne pourrait entamer sa carapace de pierre. Il mue une fois par an.",
+        "weight_kg": 300,
+        "height_m": 1.4,
+        "evolutions": [
+            "geodude",
+            "graveler",
+            "golem"
+        ],
+        "price_eur": 262
+    },
+    {
+        "pokedex_id": 77,
+        "name": "ponyta",
+        "types": [
+            "fire"
+        ],
+        "description": "Chancelantes \u00e0 la naissance, ses pattes deviennent tr\u00e8s vite s\u00fbres et solides \u00e0 force de galoper.",
+        "weight_kg": 30,
+        "height_m": 1,
+        "evolutions": [
+            "ponyta",
+            "rapidash"
+        ],
+        "price_eur": 311
+    },
+    {
+        "pokedex_id": 78,
+        "name": "rapidash",
+        "types": [
+            "fire"
+        ],
+        "description": "Au grand galop, sa crini\u00e8re de feu disperse au vent une myriade d\u2019\u00e9tincelles ardentes.",
+        "weight_kg": 95,
+        "height_m": 1.7,
+        "evolutions": [
+            "ponyta",
+            "rapidash"
+        ],
+        "price_eur": 320
+    },
+    {
+        "pokedex_id": 79,
+        "name": "slowpoke",
+        "types": [
+            "water",
+            "psychic"
+        ],
+        "description": "Bien que lent, c\u2019est un p\u00eacheur adroit qui utilise sa queue. Elle est insensible aux morsures.",
+        "weight_kg": 36,
+        "height_m": 1.2,
+        "evolutions": [
+            "slowpoke",
+            "slowbro"
+        ],
+        "price_eur": 314
+    },
+    {
+        "pokedex_id": 80,
+        "name": "slowbro",
+        "types": [
+            "water",
+            "psychic"
+        ],
+        "description": "Ce grand ben\u00eat conna\u00eet des \u00e9clairs de lucidit\u00e9 lorsque le Kokiyas de sa queue se met \u00e0 mordre.",
+        "weight_kg": 78.5,
+        "height_m": 1.6,
+        "evolutions": [
+            "slowpoke",
+            "slowbro"
+        ],
+        "price_eur": 323
+    },
+    {
+        "pokedex_id": 81,
+        "name": "magnemite",
+        "types": [
+            "electric",
+            "steel"
+        ],
+        "description": "Plus la rotation de ses extr\u00e9mit\u00e9s est rapide, plus la force du champ magn\u00e9tique qu\u2019il g\u00e9n\u00e8re est grande.",
+        "weight_kg": 6,
+        "height_m": 0.3,
+        "evolutions": [
+            "magnemite",
+            "magneton",
+            "magnezone"
+        ],
+        "price_eur": 101
+    },
+    {
+        "pokedex_id": 82,
+        "name": "magneton",
+        "types": [
+            "electric",
+            "steel"
+        ],
+        "description": "Des groupes apparaissent si des taches solaires couvrent le soleil. Ils brouillent les t\u00e9l\u00e9visions.",
+        "weight_kg": 60,
+        "height_m": 1,
+        "evolutions": [
+            "magnemite",
+            "magneton",
+            "magnezone"
+        ],
+        "price_eur": 110
+    },
+    {
+        "pokedex_id": 83,
+        "name": "farfetchd",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Il ne peut pas vivre sans son l\u00e9gume, c\u2019est pourquoi il le prot\u00e9gera au p\u00e9ril de sa vie.",
+        "weight_kg": 15,
+        "height_m": 0.8,
+        "evolutions": [
+            "farfetchd",
+            "sirfetchd"
+        ],
+        "price_eur": 84
+    },
+    {
+        "pokedex_id": 84,
+        "name": "doduo",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Ses deux cerveaux semblent communiquer leurs \u00e9motions gr\u00e2ce \u00e0 un lien t\u00e9l\u00e9pathique.",
+        "weight_kg": 39.2,
+        "height_m": 1.4,
+        "evolutions": [
+            "doduo",
+            "dodrio"
+        ],
+        "price_eur": 93
+    },
+    {
+        "pokedex_id": 85,
+        "name": "dodrio",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "description": "Quand Doduo conna\u00eet cette \u00e9trange \u00e9volution, l\u2019une de ses t\u00eates se d\u00e9double. Il atteint les 60 km/h.",
+        "weight_kg": 85.2,
+        "height_m": 1.8,
+        "evolutions": [
+            "doduo",
+            "dodrio"
+        ],
+        "price_eur": 102
+    },
+    {
+        "pokedex_id": 86,
+        "name": "seel",
+        "types": [
+            "water"
+        ],
+        "description": "Un habitant des icebergs. En mer, il utilise la corne sur sa t\u00eate pour briser la banquise.",
+        "weight_kg": 90,
+        "height_m": 1.1,
+        "evolutions": [
+            "seel",
+            "dewgong"
+        ],
+        "price_eur": 136
+    },
+    {
+        "pokedex_id": 87,
+        "name": "dewgong",
+        "types": [
+            "water",
+            "ice"
+        ],
+        "description": "Son corps est couvert d\u2019un grand manteau blanc qui, dans la neige, le dissimule aux yeux des pr\u00e9dateurs.",
+        "weight_kg": 120,
+        "height_m": 1.7,
+        "evolutions": [
+            "seel",
+            "dewgong"
+        ],
+        "price_eur": 145
+    },
+    {
+        "pokedex_id": 88,
+        "name": "grimer",
+        "types": [
+            "poison"
+        ],
+        "description": "Il est n\u00e9 d\u2019un torrent de boue expos\u00e9 aux rayons X de la lune. Il vit dans les ordures.",
+        "weight_kg": 30,
+        "height_m": 0.9,
+        "evolutions": [
+            "grimer",
+            "muk"
+        ],
+        "price_eur": 129
+    },
+    {
+        "pokedex_id": 89,
+        "name": "muk",
+        "types": [
+            "poison"
+        ],
+        "description": "Son corps exsude un fluide toxique qui tue instantan\u00e9ment les plantes et les arbres au contact.",
+        "weight_kg": 30,
+        "height_m": 1.2,
+        "evolutions": [
+            "grimer",
+            "muk"
+        ],
+        "price_eur": 138
+    },
+    {
+        "pokedex_id": 90,
+        "name": "shellder",
+        "types": [
+            "water"
+        ],
+        "description": "Il nage \u00e0 reculons en ouvrant et en refermant ses deux coquilles. Il laisse tra\u00eener sa large langue.",
+        "weight_kg": 4,
+        "height_m": 0.3,
+        "evolutions": [
+            "shellder",
+            "cloyster"
+        ],
+        "price_eur": 172
+    },
+    {
+        "pokedex_id": 91,
+        "name": "cloyster",
+        "types": [
+            "water",
+            "ice"
+        ],
+        "description": "Il se d\u00e9fend en fermant sa coquille et projette des piquants qui repoussent ses agresseurs.",
+        "weight_kg": 132.5,
+        "height_m": 1.5,
+        "evolutions": [
+            "shellder",
+            "cloyster"
+        ],
+        "price_eur": 181
+    },
+    {
+        "pokedex_id": 92,
+        "name": "gastly",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "description": "Son corps compos\u00e9 de gaz toxique pourrait asphyxier n\u2019importe qui en quelques secondes.",
+        "weight_kg": 0.1,
+        "height_m": 1.3,
+        "evolutions": [
+            "gastly",
+            "haunter",
+            "gengar"
+        ],
+        "price_eur": 215
+    },
+    {
+        "pokedex_id": 93,
+        "name": "haunter",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "description": "Il adore se tapir dans l\u2019ombre et faire frissonner ses proies en leur touchant l\u2019\u00e9paule.",
+        "weight_kg": 0.1,
+        "height_m": 1.6,
+        "evolutions": [
+            "gastly",
+            "haunter",
+            "gengar"
+        ],
+        "price_eur": 224
+    },
+    {
+        "pokedex_id": 94,
+        "name": "gengar",
+        "types": [
+            "ghost",
+            "poison"
+        ],
+        "description": "Si vous croisez un regard inqui\u00e9tant qui perce la nuit, c\u2019est s\u00fbrement un Ectoplasma.",
+        "weight_kg": 40.5,
+        "height_m": 1.5,
+        "evolutions": [
+            "gastly",
+            "haunter",
+            "gengar"
+        ],
+        "price_eur": 233
+    },
+    {
+        "pokedex_id": 95,
+        "name": "onix",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "description": "Il se nourrit des pierres qu\u2019il rencontre en creusant le sol. Il peut creuser \u00e0 80 km/h!",
+        "weight_kg": 210,
+        "height_m": 8.8,
+        "evolutions": [
+            "onix",
+            "steelix"
+        ],
+        "price_eur": 192
+    },
+    {
+        "pokedex_id": 96,
+        "name": "drowzee",
+        "types": [
+            "psychic"
+        ],
+        "description": "Son grand nez lui permet de lire les r\u00eaves d\u2019autrui. Il adore les songes amusants.",
+        "weight_kg": 32.4,
+        "height_m": 1,
+        "evolutions": [
+            "drowzee",
+            "hypno"
+        ],
+        "price_eur": 261
+    },
+    {
+        "pokedex_id": 97,
+        "name": "hypno",
+        "types": [
+            "psychic"
+        ],
+        "description": "La vue de son pendule oscillant endort en trois secondes, m\u00eame quand on vient de se r\u00e9veiller.",
+        "weight_kg": 75.6,
+        "height_m": 1.6,
+        "evolutions": [
+            "drowzee",
+            "hypno"
+        ],
+        "price_eur": 270
+    },
+    {
+        "pokedex_id": 98,
+        "name": "krabby",
+        "types": [
+            "water"
+        ],
+        "description": "Il creuse son terrier sur des plages sablonneuses. Ses pinces repoussent si on les brise.",
+        "weight_kg": 6.5,
+        "height_m": 0.4,
+        "evolutions": [
+            "krabby",
+            "kingler"
+        ],
+        "price_eur": 244
+    },
+    {
+        "pokedex_id": 99,
+        "name": "kingler",
+        "types": [
+            "water"
+        ],
+        "description": "Sa grande pince poss\u00e8de une puissance de 10 000 chevaux. Son poids la rend difficile \u00e0 manier.",
+        "weight_kg": 60,
+        "height_m": 1.3,
+        "evolutions": [
+            "krabby",
+            "kingler"
+        ],
+        "price_eur": 253
+    },
+    {
+        "pokedex_id": 100,
+        "name": "voltorb",
+        "types": [
+            "electric"
+        ],
+        "description": "Il ressemble \u00e0 une Pok\u00e9 Ball. Ce Pok\u00e9mon dangereux peut exploser ou s\u2019\u00e9lectrifier au toucher.",
+        "weight_kg": 10.4,
+        "height_m": 0.5,
+        "evolutions": [
+            "voltorb",
+            "electrode"
+        ],
+        "price_eur": 272
+    },
+    {
+        "pokedex_id": 101,
+        "name": "electrode",
+        "types": [
+            "electric"
+        ],
+        "description": "Il se laisse porter par les vents lorsque son corps est gonfl\u00e9 d\u2019\u00e9lectricit\u00e9 \u00e0 en \u00e9clater.",
+        "weight_kg": 66.6,
+        "height_m": 1.2,
+        "evolutions": [
+            "voltorb",
+            "electrode"
+        ],
+        "price_eur": 281
+    },
+    {
+        "pokedex_id": 102,
+        "name": "exeggcute",
+        "types": [
+            "grass",
+            "psychic"
+        ],
+        "description": "Ces six \u0153ufs communiquent par t\u00e9l\u00e9pathie. Ils peuvent se r\u00e9unir rapidement si on les s\u00e9pare.",
+        "weight_kg": 2.5,
+        "height_m": 0.4,
+        "evolutions": [
+            "exeggcute",
+            "exeggutor"
+        ],
+        "price_eur": 255
+    },
+    {
+        "pokedex_id": 103,
+        "name": "exeggutor",
+        "types": [
+            "grass",
+            "psychic"
+        ],
+        "description": "On l\u2019appelle \u201cjungle sur pattes\u201d. Si une t\u00eate devient trop grosse, elle tombe et produit un Noeunoeuf.",
+        "weight_kg": 120,
+        "height_m": 2,
+        "evolutions": [
+            "exeggcute",
+            "exeggutor"
+        ],
+        "price_eur": 264
+    },
+    {
+        "pokedex_id": 104,
+        "name": "cubone",
+        "types": [
+            "ground"
+        ],
+        "description": "Il pleure en pensant \u00e0 sa m\u00e8re disparue, et ses larmes r\u00e9sonnent dans son cr\u00e2ne creux.",
+        "weight_kg": 6.5,
+        "height_m": 0.4,
+        "evolutions": [
+            "cubone",
+            "marowak"
+        ],
+        "price_eur": 273
+    },
+    {
+        "pokedex_id": 105,
+        "name": "marowak",
+        "types": [
+            "ground"
+        ],
+        "description": "Ce Pok\u00e9mon sauvage poss\u00e8de des os depuis sa naissance. Il s\u2019en sert pour combattre avec dext\u00e9rit\u00e9.",
+        "weight_kg": 45,
+        "height_m": 1,
+        "evolutions": [
+            "cubone",
+            "marowak"
+        ],
+        "price_eur": 282
+    },
+    {
+        "pokedex_id": 106,
+        "name": "hitmonlee",
+        "types": [
+            "fighting"
+        ],
+        "description": "Ses pattes \u00e9lastiques s\u2019allongent, ce qui ne manque jamais de surprendre au premier combat.",
+        "weight_kg": 49.8,
+        "height_m": 1.5,
+        "evolutions": [
+            "tyrogue",
+            "hitmonlee"
+        ],
+        "price_eur": 291
+    },
+    {
+        "pokedex_id": 107,
+        "name": "hitmonchan",
+        "types": [
+            "fighting"
+        ],
+        "description": "M\u00eame le b\u00e9ton c\u00e8de sous ses poings d\u00e9vastateurs. Au combat, il s\u2019essouffle au bout de 3 minutes.",
+        "weight_kg": 50.2,
+        "height_m": 1.4,
+        "evolutions": [
+            "tyrogue",
+            "hitmonchan"
+        ],
+        "price_eur": 300
+    },
+    {
+        "pokedex_id": 108,
+        "name": "lickitung",
+        "types": [
+            "normal"
+        ],
+        "description": "Quand il d\u00e9ploie sa langue de pr\u00e8s de deux m\u00e8tres, sa queue s\u2019agite. Elles seraient reli\u00e9es entre elles.",
+        "weight_kg": 65.5,
+        "height_m": 1.2,
+        "evolutions": [
+            "lickitung",
+            "lickilicky"
+        ],
+        "price_eur": 68
+    },
+    {
+        "pokedex_id": 109,
+        "name": "koffing",
+        "types": [
+            "poison"
+        ],
+        "description": "Il flotte en retenant des gaz plus l\u00e9gers que l\u2019air. Ceux-ci sont explosifs, en plus d\u2019\u00eatre f\u00e9tides.",
+        "weight_kg": 1,
+        "height_m": 0.6,
+        "evolutions": [
+            "koffing",
+            "weezing"
+        ],
+        "price_eur": 77
+    },
+    {
+        "pokedex_id": 110,
+        "name": "weezing",
+        "types": [
+            "poison"
+        ],
+        "description": "Il grandit en absorbant les gaz des d\u00e9tritus. Des tripl\u00e9s existent, bien qu\u2019ils soient fort rares.",
+        "weight_kg": 9.5,
+        "height_m": 1.2,
+        "evolutions": [
+            "koffing",
+            "weezing"
+        ],
+        "price_eur": 86
+    },
+    {
+        "pokedex_id": 111,
+        "name": "rhyhorn",
+        "types": [
+            "ground",
+            "rock"
+        ],
+        "description": "Ses puissantes charges pourraient d\u00e9molir n\u2019importe quel b\u00e2timent. Dommage qu\u2019il soit stupide.",
+        "weight_kg": 115,
+        "height_m": 1,
+        "evolutions": [
+            "rhyhorn",
+            "rhydon",
+            "rhyperior"
+        ],
+        "price_eur": 95
+    },
+    {
+        "pokedex_id": 112,
+        "name": "rhydon",
+        "types": [
+            "ground",
+            "rock"
+        ],
+        "description": "La station debout a lib\u00e9r\u00e9 ses pattes avant et l\u2019a rendu plus intelligent, mais il est distrait.",
+        "weight_kg": 120,
+        "height_m": 1.9,
+        "evolutions": [
+            "rhyhorn",
+            "rhydon",
+            "rhyperior"
+        ],
+        "price_eur": 104
+    },
+    {
+        "pokedex_id": 113,
+        "name": "chansey",
+        "types": [
+            "normal"
+        ],
+        "description": "Ce Pok\u00e9mon tr\u00e8s serviable distribue ses \u0153ufs hautement nutritifs aux humains et Pok\u00e9mon bless\u00e9s.",
+        "weight_kg": 34.6,
+        "height_m": 1.1,
+        "evolutions": [
+            "happiny",
+            "chansey",
+            "blissey"
+        ],
+        "price_eur": 113
+    },
+    {
+        "pokedex_id": 114,
+        "name": "tangela",
+        "types": [
+            "grass"
+        ],
+        "description": "Il se cache derri\u00e8re des lianes bleues recouvertes d\u2019un fin duvet. Il est chatouilleux.",
+        "weight_kg": 35,
+        "height_m": 1,
+        "evolutions": [
+            "tangela",
+            "tangrowth"
+        ],
+        "price_eur": 122
+    },
+    {
+        "pokedex_id": 115,
+        "name": "kangaskhan",
+        "types": [
+            "normal"
+        ],
+        "description": "Il \u00e9l\u00e8ve ses petits dans sa poche ventrale. Il attend d\u2019\u00eatre en lieu s\u00fbr pour les laisser jouer dehors.",
+        "weight_kg": 80,
+        "height_m": 2.2,
+        "evolutions": [
+            "kangaskhan"
+        ],
+        "price_eur": 131
+    },
+    {
+        "pokedex_id": 116,
+        "name": "horsea",
+        "types": [
+            "water"
+        ],
+        "description": "Il niche \u00e0 l\u2019ombre du corail. Quand il se sent menac\u00e9, il dispara\u00eet dans un nuage d\u2019encre opaque.",
+        "weight_kg": 8,
+        "height_m": 0.4,
+        "evolutions": [
+            "horsea",
+            "seadra",
+            "kingdra"
+        ],
+        "price_eur": 165
+    },
+    {
+        "pokedex_id": 117,
+        "name": "seadra",
+        "types": [
+            "water"
+        ],
+        "description": "Son \u00e9pine dorsale le prot\u00e8ge. Ses os et ses nageoires sont tr\u00e8s pris\u00e9s en m\u00e9decine traditionnelle.",
+        "weight_kg": 25,
+        "height_m": 1.2,
+        "evolutions": [
+            "horsea",
+            "seadra",
+            "kingdra"
+        ],
+        "price_eur": 174
+    },
+    {
+        "pokedex_id": 118,
+        "name": "goldeen",
+        "types": [
+            "water"
+        ],
+        "description": "Malgr\u00e9 son \u00e9l\u00e9gance quand il nage, ses coups de corne sont redoutables.",
+        "weight_kg": 15,
+        "height_m": 0.6,
+        "evolutions": [
+            "goldeen",
+            "seaking"
+        ],
+        "price_eur": 183
+    },
+    {
+        "pokedex_id": 119,
+        "name": "seaking",
+        "types": [
+            "water"
+        ],
+        "description": "En automne, \u00e0 la saison des amours, il fait des r\u00e9serves de graisse et arbore des couleurs chatoyantes.",
+        "weight_kg": 39,
+        "height_m": 1.3,
+        "evolutions": [
+            "goldeen",
+            "seaking"
+        ],
+        "price_eur": 192
+    },
+    {
+        "pokedex_id": 120,
+        "name": "staryu",
+        "types": [
+            "water"
+        ],
+        "description": "M\u00eame amoch\u00e9, son corps se r\u00e9g\u00e9n\u00e8re tant que le noyau rouge est intact. Le noyau s\u2019illumine \u00e0 minuit.",
+        "weight_kg": 34.5,
+        "height_m": 0.8,
+        "evolutions": [
+            "staryu",
+            "starmie"
+        ],
+        "price_eur": 201
+    },
+    {
+        "pokedex_id": 121,
+        "name": "starmie",
+        "types": [
+            "water",
+            "psychic"
+        ],
+        "description": "Un noyau rouge tr\u00f4ne en son centre. Il envoie des signaux radio myst\u00e9rieux vers le ciel nocturne.",
+        "weight_kg": 80,
+        "height_m": 1.1,
+        "evolutions": [
+            "staryu",
+            "starmie"
+        ],
+        "price_eur": 210
+    },
+    {
+        "pokedex_id": 122,
+        "name": "mr-mime",
+        "types": [
+            "psychic",
+            "fairy"
+        ],
+        "description": "En modifiant les mol\u00e9cules de l\u2019air du bout de ses doigts, il parvient \u00e0 cr\u00e9er un mur invisible devant lui.",
+        "weight_kg": 54.5,
+        "height_m": 1.3,
+        "evolutions": [
+            "mime-jr",
+            "mr-mime",
+            "mr-rime"
+        ],
+        "price_eur": 254
+    },
+    {
+        "pokedex_id": 123,
+        "name": "scyther",
+        "types": [
+            "bug",
+            "flying"
+        ],
+        "description": "\u00c0 force de trancher des objets solides, les faux de ses bras sont tr\u00e8s aiguis\u00e9es.",
+        "weight_kg": 56,
+        "height_m": 1.5,
+        "evolutions": [
+            "scyther",
+            "scizor"
+        ],
+        "price_eur": 203
+    },
+    {
+        "pokedex_id": 124,
+        "name": "jynx",
+        "types": [
+            "ice",
+            "psychic"
+        ],
+        "description": "Son cri ressemble \u00e0 des paroles humaines. Mais nul n\u2019est jamais parvenu \u00e0 les comprendre.",
+        "weight_kg": 40.6,
+        "height_m": 1.4,
+        "evolutions": [
+            "smoochum",
+            "jynx"
+        ],
+        "price_eur": 212
+    },
+    {
+        "pokedex_id": 125,
+        "name": "electabuzz",
+        "types": [
+            "electric"
+        ],
+        "description": "Il fait tournoyer ses bras pour donner de la force \u00e0 ses coups. Profitez-en pour filer!",
+        "weight_kg": 30,
+        "height_m": 1.1,
+        "evolutions": [
+            "elekid",
+            "electabuzz",
+            "electivire"
+        ],
+        "price_eur": 256
+    },
+    {
+        "pokedex_id": 126,
+        "name": "magmar",
+        "types": [
+            "fire"
+        ],
+        "description": "Quand il respire profond\u00e9ment, des vagues de chaleur \u00e9manent de son corps et le rendent difficile \u00e0 voir.",
+        "weight_kg": 44.5,
+        "height_m": 1.3,
+        "evolutions": [
+            "magby",
+            "magmar",
+            "magmortar"
+        ],
+        "price_eur": 270
+    },
+    {
+        "pokedex_id": 127,
+        "name": "pinsir",
+        "types": [
+            "bug"
+        ],
+        "description": "Il serre les proies dans ses pinces pour les trancher en deux. S\u2019il n\u2019y arrive pas, il les jette au loin.",
+        "weight_kg": 55,
+        "height_m": 1.5,
+        "evolutions": [
+            "pinsir"
+        ],
+        "price_eur": 239
+    },
+    {
+        "pokedex_id": 128,
+        "name": "tauros",
+        "types": [
+            "normal"
+        ],
+        "description": "Apr\u00e8s avoir choisi sa cible, il fonce dessus t\u00eate baiss\u00e9e. Il est r\u00e9put\u00e9 pour sa nature violente.",
+        "weight_kg": 88.4,
+        "height_m": 1.4,
+        "evolutions": [
+            "tauros"
+        ],
+        "price_eur": 248
+    },
+    {
+        "pokedex_id": 129,
+        "name": "magikarp",
+        "types": [
+            "water"
+        ],
+        "description": "Un v\u00e9n\u00e9rable Magicarpe peut franchir une montagne en utilisant Trempette. Mais c\u2019est tout...",
+        "weight_kg": 10,
+        "height_m": 0.9,
+        "evolutions": [
+            "magikarp",
+            "gyarados"
+        ],
+        "price_eur": 282
+    },
+    {
+        "pokedex_id": 130,
+        "name": "gyarados",
+        "types": [
+            "water",
+            "flying"
+        ],
+        "description": "Quand il se laisse emporter par la rage, il ne se calme qu\u2019apr\u00e8s avoir d\u00e9truit tout ce qui l\u2019entoure.",
+        "weight_kg": 235,
+        "height_m": 6.5,
+        "evolutions": [
+            "magikarp",
+            "gyarados"
+        ],
+        "price_eur": 291
+    },
+    {
+        "pokedex_id": 131,
+        "name": "lapras",
+        "types": [
+            "water",
+            "ice"
+        ],
+        "description": "Il aime naviguer en portant des humains et des Pok\u00e9mon sur son dos. Il comprend le langage humain.",
+        "weight_kg": 220,
+        "height_m": 2.5,
+        "evolutions": [
+            "lapras"
+        ],
+        "price_eur": 300
+    },
+    {
+        "pokedex_id": 132,
+        "name": "ditto",
+        "types": [
+            "normal"
+        ],
+        "description": "Il a la capacit\u00e9 de modifier sa structure cellulaire pour prendre l\u2019apparence de ce qu\u2019il voit.",
+        "weight_kg": 4,
+        "height_m": 0.3,
+        "evolutions": [
+            "ditto"
+        ],
+        "price_eur": 284
+    },
+    {
+        "pokedex_id": 133,
+        "name": "eevee",
+        "types": [
+            "normal"
+        ],
+        "description": "Son ADN particulier lui permet de s\u2019adapter tr\u00e8s rapidement \u00e0 son environnement.",
+        "weight_kg": 6.5,
+        "height_m": 0.3,
+        "evolutions": [
+            "eevee",
+            "vaporeon"
+        ],
+        "price_eur": 293
+    },
+    {
+        "pokedex_id": 134,
+        "name": "vaporeon",
+        "types": [
+            "water"
+        ],
+        "description": "Sa composition mol\u00e9culaire est proche de celle de l\u2019eau, ce qui lui permet de se liqu\u00e9fier.",
+        "weight_kg": 29,
+        "height_m": 1,
+        "evolutions": [
+            "eevee",
+            "vaporeon"
+        ],
+        "price_eur": 86
+    },
+    {
+        "pokedex_id": 135,
+        "name": "jolteon",
+        "types": [
+            "electric"
+        ],
+        "description": "Face au danger, il fait appel \u00e0 l\u2019\u00e9lectricit\u00e9 pour dresser ses poils et lancer des d\u00e9charges.",
+        "weight_kg": 24.5,
+        "height_m": 0.8,
+        "evolutions": [
+            "eevee",
+            "jolteon"
+        ],
+        "price_eur": 105
+    },
+    {
+        "pokedex_id": 136,
+        "name": "flareon",
+        "types": [
+            "fire"
+        ],
+        "description": "L\u2019air qu\u2019il inspire est chauff\u00e9 par la glande enflamm\u00e9e de son corps, atteignant les 1 700 \u00b0C.",
+        "weight_kg": 25,
+        "height_m": 0.9,
+        "evolutions": [
+            "eevee",
+            "flareon"
+        ],
+        "price_eur": 119
+    },
+    {
+        "pokedex_id": 137,
+        "name": "porygon",
+        "types": [
+            "normal"
+        ],
+        "description": "Ce Pok\u00e9mon cr\u00e9\u00e9 par des scientifiques peut arpenter librement le cyberespace.",
+        "weight_kg": 36.5,
+        "height_m": 0.8,
+        "evolutions": [
+            "porygon",
+            "porygon2",
+            "porygon-z"
+        ],
+        "price_eur": 88
+    },
+    {
+        "pokedex_id": 138,
+        "name": "omanyte",
+        "types": [
+            "rock",
+            "water"
+        ],
+        "description": "Un Pok\u00e9mon ramen\u00e9 \u00e0 la vie par la science \u00e0 partir d\u2019un fossile. Il peuplait autrefois les mers.",
+        "weight_kg": 7.5,
+        "height_m": 0.4,
+        "evolutions": [
+            "omanyte",
+            "omastar"
+        ],
+        "price_eur": 97
+    },
+    {
+        "pokedex_id": 139,
+        "name": "omastar",
+        "types": [
+            "rock",
+            "water"
+        ],
+        "description": "On pense que ce Pok\u00e9mon a disparu parce que sa coquille en spirale \u00e9tait devenue trop grosse.",
+        "weight_kg": 35,
+        "height_m": 1,
+        "evolutions": [
+            "omanyte",
+            "omastar"
+        ],
+        "price_eur": 106
+    },
+    {
+        "pokedex_id": 140,
+        "name": "kabuto",
+        "types": [
+            "rock",
+            "water"
+        ],
+        "description": "On pense qu\u2019il peuplait les plages il y a 300 millions d\u2019ann\u00e9es. Il est prot\u00e9g\u00e9 par une coquille robuste.",
+        "weight_kg": 11.5,
+        "height_m": 0.5,
+        "evolutions": [
+            "kabuto",
+            "kabutops"
+        ],
+        "price_eur": 115
+    },
+    {
+        "pokedex_id": 141,
+        "name": "kabutops",
+        "types": [
+            "rock",
+            "water"
+        ],
+        "description": "On pense que ce Pok\u00e9mon est venu sur la terre ferme pour suivre l\u2019\u00e9volution de ses proies.",
+        "weight_kg": 40.5,
+        "height_m": 1.3,
+        "evolutions": [
+            "kabuto",
+            "kabutops"
+        ],
+        "price_eur": 124
+    },
+    {
+        "pokedex_id": 142,
+        "name": "aerodactyl",
+        "types": [
+            "rock",
+            "flying"
+        ],
+        "description": "Un Pok\u00e9mon qui arpentait le ciel au temps des dinosaures. Ses crocs sont pareils \u00e0 des scies.",
+        "weight_kg": 59,
+        "height_m": 1.8,
+        "evolutions": [
+            "aerodactyl"
+        ],
+        "price_eur": 133
+    },
+    {
+        "pokedex_id": 143,
+        "name": "snorlax",
+        "types": [
+            "normal"
+        ],
+        "description": "Une fois le ventre plein, il est trop amorphe pour lever le petit doigt. Sautez sur son ventre!",
+        "weight_kg": 460,
+        "height_m": 2.1,
+        "evolutions": [
+            "munchlax",
+            "snorlax"
+        ],
+        "price_eur": 142
+    },
+    {
+        "pokedex_id": 144,
+        "name": "articuno",
+        "types": [
+            "ice",
+            "flying"
+        ],
+        "description": "Un Pok\u00e9mon Oiseau l\u00e9gendaire. Il peut provoquer des blizzards en gelant l\u2019humidit\u00e9 de l\u2019air.",
+        "weight_kg": 55.4,
+        "height_m": 1.7,
+        "evolutions": [
+            "articuno"
+        ],
+        "price_eur": 151
+    },
+    {
+        "pokedex_id": 145,
+        "name": "zapdos",
+        "types": [
+            "electric",
+            "flying"
+        ],
+        "description": "Un Pok\u00e9mon Oiseau l\u00e9gendaire dont on dit qu\u2019il vit dans les nuages d\u2019orage. Il contr\u00f4le la foudre.",
+        "weight_kg": 52.6,
+        "height_m": 1.6,
+        "evolutions": [
+            "zapdos"
+        ],
+        "price_eur": 195
+    },
+    {
+        "pokedex_id": 146,
+        "name": "moltres",
+        "types": [
+            "fire",
+            "flying"
+        ],
+        "description": "L\u2019un des Pok\u00e9mon Oiseaux l\u00e9gendaires. On dit que sa venue annonce l\u2019arriv\u00e9e du printemps.",
+        "weight_kg": 60,
+        "height_m": 2,
+        "evolutions": [
+            "moltres"
+        ],
+        "price_eur": 209
+    },
+    {
+        "pokedex_id": 147,
+        "name": "dratini",
+        "types": [
+            "dragon"
+        ],
+        "description": "On l\u2019appelle \u201cPok\u00e9mon mirage\u201d en raison de sa raret\u00e9. On a d\u00e9couvert sa mue.",
+        "weight_kg": 3.3,
+        "height_m": 1.8,
+        "evolutions": [
+            "dratini",
+            "dragonair",
+            "dragonite"
+        ],
+        "price_eur": 298
+    },
+    {
+        "pokedex_id": 148,
+        "name": "dragonair",
+        "types": [
+            "dragon"
+        ],
+        "description": "La m\u00e9t\u00e9o change brusquement quand il est entour\u00e9 d\u2019une aura. On dit qu\u2019il peuple les mers et les lacs.",
+        "weight_kg": 16.5,
+        "height_m": 4,
+        "evolutions": [
+            "dratini",
+            "dragonair",
+            "dragonite"
+        ],
+        "price_eur": 307
+    },
+    {
+        "pokedex_id": 149,
+        "name": "dragonite",
+        "types": [
+            "dragon",
+            "flying"
+        ],
+        "description": "On raconte qu\u2019il vit quelque part en mer. Il guide les \u00e9quipages naufrag\u00e9s jusqu\u2019\u00e0 la terre ferme.",
+        "weight_kg": 210,
+        "height_m": 2.2,
+        "evolutions": [
+            "dratini",
+            "dragonair",
+            "dragonite"
+        ],
+        "price_eur": 316
+    },
+    {
+        "pokedex_id": 150,
+        "name": "mewtwo",
+        "types": [
+            "psychic"
+        ],
+        "description": "Un Pok\u00e9mon con\u00e7u en r\u00e9organisant les g\u00e8nes de Mew. On raconte qu\u2019il s\u2019agit du Pok\u00e9mon le plus f\u00e9roce.",
+        "weight_kg": 122,
+        "height_m": 2,
+        "evolutions": [
+            "mewtwo"
+        ],
+        "price_eur": 265
+    },
+    {
+        "pokedex_id": 151,
+        "name": "mew",
+        "types": [
+            "psychic"
+        ],
+        "description": "Nombre de scientifiques voient en lui l\u2019anc\u00eatre des Pok\u00e9mon car il ma\u00eetrise toutes leurs capacit\u00e9s.",
+        "weight_kg": 4,
+        "height_m": 0.4,
+        "evolutions": [
+            "mew"
+        ],
+        "price_eur": 274
+    }
+]
