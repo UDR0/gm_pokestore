@@ -7,9 +7,9 @@ $search = $_GET['search'] ?? '';
 // Préparer la requête
 if (!empty($search)) {
     $stmt = $conn->prepare("
-        SELECT articles.*, users.username 
-        FROM articles 
-        LEFT JOIN users ON articles.author_id = users.id 
+        SELECT articles.*, users.username
+        FROM articles
+        LEFT JOIN users ON articles.author_id = users.id
         WHERE articles.name LIKE ?
         ORDER BY articles.created_at DESC
     ");
@@ -19,9 +19,9 @@ if (!empty($search)) {
     $result = $stmt->get_result();
 } else {
     $result = $conn->query("
-        SELECT articles.*, users.username 
-        FROM articles 
-        LEFT JOIN users ON articles.author_id = users.id 
+        SELECT articles.*, users.username
+        FROM articles
+        LEFT JOIN users ON articles.author_id = users.id
         ORDER BY articles.created_at DESC
     ");
 }
@@ -133,7 +133,7 @@ if (!empty($search)) {
         </div>
     </section>
 
-    <div class="catalog">
+    <div class="catalog" id="catalog">
 
         <?php if ($result->num_rows === 0): ?>
             <div style="padding: 30px; opacity: 0.8;">
@@ -144,6 +144,9 @@ if (!empty($search)) {
             <?php
             // Prépare une requête stock
             $stockStmt = $conn->prepare("SELECT quantity FROM stock WHERE article_id = ?");
+
+            $i = 0;
+            $totalCards = $result->num_rows;
             ?>
 
             <?php while ($article = $result->fetch_assoc()): ?>
@@ -167,9 +170,12 @@ if (!empty($search)) {
                 }
 
                 $seller = $article['username'] ?? "GM Poke'Store";
+
+                // Voir plus: cache tout après 12
+                $hidden = ($i >= 12);
                 ?>
 
-                <article class="card">
+                <article class="card js-card" style="<?= $hidden ? 'display:none;' : '' ?>">
                     <div class="tech-border-top"></div>
 
                     <div class="card-spine">
@@ -226,9 +232,83 @@ if (!empty($search)) {
 
                     </div>
                 </article>
+
+                <?php $i++; ?>
             <?php endwhile; ?>
 
             <?php if ($stockStmt) { $stockStmt->close(); } ?>
+
+            <?php if ($totalCards > 12): ?>
+                    <div style="display:flex; justify-content:center; margin: 40px 0;">
+                        <div style="display:flex; gap: 14px; align-items:center;">
+                            <button id="btnVoirMoins"
+                                    type="button"
+                                    class="search-btn"
+                                    style="width:auto; padding: 14px 28px; opacity: 0.35; cursor: not-allowed;"
+                                    disabled>
+                                Voir moins
+                            </button>
+
+                            <button id="btnVoirPlus"
+                                    type="button"
+                                    class="search-btn"
+                                    style="width:auto; padding: 14px 28px;">
+                                Voir plus
+                            </button>
+                        </div>
+                    </div>
+
+                    <script>
+                        (function () {
+                            const batch = 12;
+                            const cards = Array.from(document.querySelectorAll(".js-card"));
+                            const btnPlus = document.getElementById("btnVoirPlus");
+                            const btnMoins = document.getElementById("btnVoirMoins");
+                            const catalog = document.getElementById("catalog");
+
+                            if (!btnPlus || !btnMoins) return;
+
+                            function visibleCount() {
+                                return cards.filter(c => c.style.display !== "none").length;
+                            }
+
+                            function setMoinsEnabled(enabled) {
+                                btnMoins.disabled = !enabled;
+                                btnMoins.style.opacity = enabled ? "1" : "0.35";
+                                btnMoins.style.cursor = enabled ? "pointer" : "not-allowed";
+                            }
+
+                            function updateButtons() {
+                                const shown = visibleCount();
+                                setMoinsEnabled(shown > 12);
+                                btnPlus.style.display = (shown >= cards.length) ? "none" : "";
+                            }
+
+                            // Init
+                            updateButtons();
+
+                            btnPlus.addEventListener("click", () => {
+                                const hidden = cards.filter(c => c.style.display === "none");
+                                hidden.slice(0, batch).forEach(c => c.style.display = "");
+                                updateButtons();
+                            });
+
+                            btnMoins.addEventListener("click", () => {
+                                // Revenir à 12 visibles
+                                cards.forEach((c, idx) => {
+                                    c.style.display = (idx < 12) ? "" : "none";
+                                });
+
+                                updateButtons();
+
+                                // Scroll propre vers la grille
+                                if (catalog) {
+                                    catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+                                }
+                            });
+                        })();
+                    </script>
+                <?php endif; ?>
 
         <?php endif; ?>
 
