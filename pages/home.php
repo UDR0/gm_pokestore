@@ -27,23 +27,210 @@ if (!empty($search)) {
 }
 ?>
 
-<h1>GM Poke'Store 🐾⚡</h1>
+<section class="hero-landing">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-scanline"></div>
 
-<form method="GET" action="index.php" style="margin-bottom:20px;">
-    <input type="hidden" name="page" value="home">
-    <input type="text" name="search" placeholder="Rechercher un Pokémon..." value="<?= htmlspecialchars($search) ?>">
-    <button type="submit">Rechercher</button>
-</form>
+    <div class="hero-inner">
 
-<?php if ($result->num_rows === 0): ?>
-    <p>Aucun Pokémon trouvé 😢</p>
-<?php endif; ?>
+        <div class="hero-copy">
+            <div class="hero-eyebrow">GM PokéStore // Plateforme Premium</div>
 
-<?php while ($article = $result->fetch_assoc()): ?>
-    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
-        <h3><?= htmlspecialchars($article['name']) ?></h3>
-        <p>Vendu par <?= htmlspecialchars($article['username'] ?? "GM Poke'Store") ?></p>
-        <p><?= number_format($article['price'], 2) ?> €</p>
-        <a href="index.php?page=detail&id=<?= $article['id'] ?>">Voir détail</a>
+            <h2 class="hero-headline">
+                Catch<br>
+                <span class="line-muted">Legends.</span><br>
+                <span class="line-accent">Own</span> <span class="line-glow">Power.</span>
+            </h2>
+
+            <p class="hero-sub">
+                La <em>référence absolue</em> du trading Pokémon d'élite.
+                Assets authentifiés. Données de marché en temps réel.
+                <em>Sans compromis.</em>
+            </p>
+
+            <div class="hero-cta-row">
+                <a href="#market" class="hero-cta-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">
+                    Accéder au Marché
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">151</span>
+                    <span class="hero-stat-label">Espèces listées</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">12K</span>
+                    <span class="hero-stat-label">Dresseurs actifs</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">$4.2M</span>
+                    <span class="hero-stat-label">Volume / Mois</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-card-wrap">
+            <div class="hero-poke-card">
+                <div class="corner-accent tl"></div>
+                <div class="corner-accent tr"></div>
+                <div class="corner-accent bl"></div>
+                <div class="corner-accent br"></div>
+
+                <div class="hero-card-top">
+                    <span class="hero-card-tag">// Offre du Jour</span>
+                    <span class="hero-card-id">150</span>
+                </div>
+
+                <div class="hero-card-img-wrap">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
+                    <div class="hero-card-type-badge">PSYCHIC</div>
+                </div>
+
+                <div class="hero-card-info">
+                    <div class="hero-card-name">Mewtwo</div>
+                    <div class="hero-card-meta">
+                        <span class="hero-card-rarity">DERNIER EXEMPLAIRE — AGIS VITE</span>
+                        <span class="hero-card-price">$2,400</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-<?php endwhile; ?>
+</section>
+
+<div class="container" id="market">
+
+    <section class="hero-search">
+        <div class="hero-grid-lines"></div>
+
+        <h1 style="font-family: var(--font-display); font-size: 64px; margin-bottom: 24px; text-transform: uppercase; line-height: 0.9;">
+            Région <span style="color: var(--text-muted)">Kanto</span><br>
+            <span style="color: var(--accent-purple)">Base de Données</span>
+        </h1>
+
+        <!-- searchbar -->
+        <form class="search-interface" method="GET" action="index.php">
+            <input type="hidden" name="page" value="home">
+            <input
+                type="text"
+                class="search-input"
+                name="search"
+                placeholder="RECHERCHER ESPÈCE / ID / TYPE..."
+                value="<?= htmlspecialchars($search) ?>"
+            >
+            <button class="search-btn" type="submit">Scanner</button>
+        </form>
+
+        <div class="filter-bar">
+            <div class="filter-tag">TYPE : FEU</div>
+            <div class="filter-tag">TYPE : EAU</div>
+            <div class="filter-tag">TYPE : PLANTE</div>
+            <div class="filter-tag">STATUT : RARE</div>
+            <div class="filter-tag">RÉGION : KANTO</div>
+        </div>
+    </section>
+
+    <div class="catalog">
+
+        <?php if ($result->num_rows === 0): ?>
+            <div style="padding: 30px; opacity: 0.8;">
+                Aucun Pokémon trouvé 😢
+            </div>
+        <?php else: ?>
+
+            <?php
+            // Prépare une requête stock
+            $stockStmt = $conn->prepare("SELECT quantity FROM stock WHERE article_id = ?");
+            ?>
+
+            <?php while ($article = $result->fetch_assoc()): ?>
+                <?php
+                $articleId = (int)$article['id'];
+                $pokeId = str_pad((string)$articleId, 3, "0", STR_PAD_LEFT);
+
+                // Stock
+                $stockQty = null;
+                if ($stockStmt) {
+                    $stockStmt->bind_param("i", $articleId);
+                    $stockStmt->execute();
+                    $stockRow = $stockStmt->get_result()->fetch_assoc();
+                    $stockQty = $stockRow['quantity'] ?? null;
+                }
+
+                // Image
+                $img = trim($article['image'] ?? '');
+                if ($img === '') {
+                    $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png";
+                }
+
+                $seller = $article['username'] ?? "GM Poke'Store";
+                ?>
+
+                <article class="card">
+                    <div class="tech-border-top"></div>
+
+                    <div class="card-spine">
+                        <span><?= strtoupper("GM_STORE // " . $seller) ?></span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="poke-id"><?= htmlspecialchars($pokeId) ?></span>
+
+                            <!-- FAVORI (toggle) -->
+                            <form method="POST" action="actions/toggle_favorite.php" style="margin:0;">
+                                <input type="hidden" name="article_id" value="<?= $articleId ?>">
+                                <button type="submit" class="favorite-btn">♥</button>
+                            </form>
+                        </div>
+
+                        <div class="card-image">
+                            <a href="index.php?page=detail&id=<?= $articleId ?>" style="display:block;">
+                                <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($article['name']) ?>">
+                            </a>
+                            <div class="card-overlay"></div>
+                            <div class="type-badge">GM POKÉSTORE</div>
+                        </div>
+
+                        <div class="card-details">
+                            <div>
+                                <a href="index.php?page=detail&id=<?= $articleId ?>" class="poke-name" style="text-decoration:none;color:inherit;display:inline-block;">
+                                    <?= htmlspecialchars($article['name']) ?>
+                                </a>
+                                <div class="slashes">///////</div>
+                            </div>
+
+                            <?php if ($stockQty !== null): ?>
+                                <?php if ((int)$stockQty <= 1): ?>
+                                    <div class="stock-status" style="color: var(--accent-pink);">DERNIER EXEMPLAIRE</div>
+                                <?php else: ?>
+                                    <div class="stock-status">EN STOCK : <?= str_pad((string)$stockQty, 2, "0", STR_PAD_LEFT) ?></div>
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <div class="stock-status">EN STOCK : --</div>
+                            <?php endif; ?>
+
+                            <div class="price-row">
+                                <span class="price"><?= number_format((float)$article['price'], 2) ?> €</span>
+
+                                <!-- AJOUT PANIER -->
+                                <form method="POST" action="actions/add_to_cart.php" style="margin:0;">
+                                    <input type="hidden" name="article_id" value="<?= $articleId ?>">
+                                    <button type="submit" class="add-cart-btn">AJOUTER +</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+            <?php endwhile; ?>
+
+            <?php if ($stockStmt) { $stockStmt->close(); } ?>
+
+        <?php endif; ?>
+
+    </div>
+</div>
