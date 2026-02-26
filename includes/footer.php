@@ -38,9 +38,12 @@
 
             <div class="footer-col">
                 <h4>Newsletter</h4>
-                <p style="margin-bottom: 12px;">Recevez les actus du marché.</p>
-                <input type="email" placeholder="SAISIR VOTRE EMAIL" class="newsletter-input">
-                <button class="add-cart-btn" style="width: 100%; justify-content: center;">S'ABONNER</button>
+                <p class="newsletter-text">Recevez les actus du marché.</p>
+
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="newsletter_email" placeholder="SAISIR VOTRE EMAIL" class="newsletter-input" required>
+                    <button type="submit" class="add-cart-btn newsletter-btn">S'ABONNER</button>
+                </form>
             </div>
         </div>
 

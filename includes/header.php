@@ -19,6 +19,7 @@ $isAuthPage = ($page === 'login' || $page === 'register');
 
     <!-- CSS global -->
     <link rel="stylesheet" href="assets/css/front.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
     <!-- CSS par page -->
     <?php if ($page === 'home'): ?>

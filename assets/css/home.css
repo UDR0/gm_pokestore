@@ -442,28 +442,6 @@
         font-weight: 700;
         color: var(--text-main);
     }
-
-    .add-cart-btn {
-        background: transparent;
-        border: 1px solid var(--text-main);
-        color: var(--text-main);
-        padding: 8px 16px;
-        font-family: var(--font-tech);
-        font-size: 11px;
-        font-weight: 700;
-        cursor: pointer;
-        text-transform: uppercase;
-        transition: all 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .add-cart-btn:hover {
-        background: var(--text-main);
-        color: var(--bg-deep);
-    }
-
     
     .load-more-container {
         grid-column: 1 / -1;
@@ -513,61 +491,6 @@
         color: #fff;
         box-shadow: 0 0 30px rgba(124,58,237,0.4);
     }
-
-    
-    footer {
-        border-top: 1px solid var(--border-tech);
-        background: var(--bg-panel);
-        padding: 60px 40px;
-        font-size: 12px;
-        color: var(--text-muted);
-    }
-
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 40px;
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-
-    .footer-col h4 {
-        color: var(--text-main);
-        margin-bottom: 24px;
-        text-transform: uppercase;
-        font-family: var(--font-display);
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-
-    .footer-col ul {
-        list-style: none;
-    }
-
-    .footer-col li {
-        margin-bottom: 12px;
-    }
-
-    .footer-col a {
-        color: var(--text-muted);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-        color: var(--accent-cyan);
-    }
-
-    .newsletter-input {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid var(--border-tech);
-        padding: 12px;
-        width: 100%;
-        color: white;
-        margin-bottom: 12px;
-        font-family: var(--font-tech);
-    }
-
     
     @keyframes glitch {
         0% { transform: translate(0); }
