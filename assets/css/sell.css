@@ -1,0 +1,349 @@
+    :root {
+        --bg-deep: #050508;
+        --bg-panel: #0a0a10;
+        --bg-card: #0f0f16;
+        --accent-purple: #7c3aed; 
+        --accent-cyan: #06b6d4;   
+        --accent-pink: #f43f5e;   
+        --accent-blue: #2563eb;   
+        --text-main: #ffffff;
+        --text-muted: #64748b;
+        --border-tech: rgba(255, 255, 255, 0.15);
+        --font-display: 'Teko', sans-serif; 
+        --font-tech: 'JetBrains Mono', monospace; 
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-deep);
+        color: var(--text-main);
+        font-family: var(--font-tech);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    .slashes {
+        display: inline-block;
+        letter-spacing: -2px;
+        color: var(--border-tech);
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    header {
+        border-bottom: 1px solid var(--border-tech);
+        padding: 24px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-deep);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+    }
+
+    .brand {
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .brand span { color: var(--accent-cyan); }
+
+    nav ul { display: flex; gap: 32px; list-style: none; }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+        position: relative;
+    }
+
+    nav a:hover, nav a.active { color: var(--text-main); }
+
+    nav a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--accent-pink);
+        box-shadow: 0 -5px 10px var(--accent-pink);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
+    .page-title {
+        margin-bottom: 48px;
+    }
+
+    .page-title h1 {
+        font-family: var(--font-display);
+        font-size: 72px;
+        text-transform: uppercase;
+        line-height: 0.9;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: var(--accent-cyan);
+        font-size: 12px;
+        letter-spacing: 4px;
+        font-weight: 700;
+    }
+
+    .sell-layout {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+    
+    .form-terminal {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-tech);
+        padding: 40px;
+        position: relative;
+    }
+
+    .form-terminal::before {
+        content: 'UPLOAD_MODULE // READY';
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        background: var(--bg-deep);
+        padding: 0 10px;
+        font-size: 10px;
+        color: var(--accent-cyan);
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: var(--bg-card);
+        border: 1px solid var(--border-tech);
+        transition: border-color 0.3s;
+    }
+
+    .input-wrapper:focus-within {
+        border-color: var(--accent-purple);
+    }
+
+    .input-prefix {
+        padding-left: 16px;
+        font-size: 12px;
+        color: var(--accent-cyan);
+        opacity: 0.6;
+        user-select: none;
+    }
+
+    .form-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 14px 16px;
+        color: var(--text-main);
+        font-family: var(--font-tech);
+        font-size: 14px;
+        outline: none;
+    }
+
+    textarea.form-input {
+        min-height: 100px;
+        resize: none;
+        overflow: hidden;
+        field-sizing: content;
+    }
+
+    .sell-btn {
+        width: 100%;
+        background: var(--accent-purple);
+        color: white;
+        border: none;
+        padding: 20px;
+        font-family: var(--font-display);
+        font-size: 24px;
+        text-transform: uppercase;
+        cursor: pointer;
+        clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+        transition: all 0.3s;
+        margin-top: 20px;
+    }
+
+    .sell-btn:hover {
+        background: #8b5cf6;
+        box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+    }
+
+    
+    .preview-section h3 {
+        font-family: var(--font-display);
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-tech);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .card-spine {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 24px;
+        border-right: 1px solid var(--border-tech);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.02);
+    }
+
+    .card-spine span {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        font-size: 10px;
+        color: var(--text-muted);
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+    .card-content { margin-left: 24px; display: flex; flex-direction: column; }
+
+    .card-header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-tech);
+    }
+
+    .card-image {
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at center, rgba(124,58,237,0.1) 0%, transparent 70%);
+    }
+
+    .card-image img {
+        height: 80%;
+        opacity: 0.5;
+    }
+
+    .type-badge {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        font-size: 10px;
+        border: 1px solid var(--accent-cyan);
+        color: var(--accent-cyan);
+        padding: 4px 8px;
+        background: rgba(0,0,0,0.6);
+    }
+
+    .card-details {
+        padding: 20px;
+        background: var(--bg-card);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .poke-name {
+        font-family: var(--font-display);
+        font-size: 32px;
+        text-transform: uppercase;
+        line-height: 0.9;
+    }
+
+    .price-row {
+        margin-top: 12px;
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top: 1px dashed var(--border-tech);
+    }
+
+    .legal-footer {
+        margin-top: 40px;
+        font-size: 10px;
+        color: var(--text-muted);
+        opacity: 0.6;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .grid-bg {
+        position: fixed;
+        inset: 0;
+        background-image: 
+            linear-gradient(var(--border-tech) 1px, transparent 1px),
+            linear-gradient(90deg, var(--border-tech) 1px, transparent 1px);
+        background-size: 100px 100px;
+        opacity: 0.03;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .preview-info{
+    margin-top: 32px !important;
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px dashed var(--border-tech) !important;
+    padding: 20px !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    color: var(--text-muted);
+    }
+
+    .preview-info br{
+    display: block;
+    content: "";
+    margin-top: 6px;
+    }
+
+    .preview-info .accent{
+    color: var(--accent-cyan) !important;
+    font-weight: 700;
+    }

@@ -57,6 +57,10 @@ $isAuthPage = ($page === 'login' || $page === 'register');
     <?php if (isset($_GET['page']) && $_GET['page'] === 'admin'): ?>
         <link rel="stylesheet" href="assets/css/admin.css">
     <?php endif; ?>
+
+    <?php if (isset($_GET['page']) && $_GET['page'] === 'sell'): ?>
+        <link rel="stylesheet" href="assets/css/sell.css">
+    <?php endif; ?>
 </head>
 
 <body>

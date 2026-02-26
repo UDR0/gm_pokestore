@@ -191,6 +191,7 @@ if (!empty($search)) {
                             <!-- FAVORI (toggle) -->
                             <form method="POST" action="actions/toggle_favorite.php" style="margin:0;">
                                 <input type="hidden" name="article_id" value="<?= $articleId ?>">
+                                <input type="hidden" name="redirect" value="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
                                 <button type="submit" class="favorite-btn">♥</button>
                             </form>
                         </div>
