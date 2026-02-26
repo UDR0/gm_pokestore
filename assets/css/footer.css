@@ -32,7 +32,6 @@ footer{
 }
 .footer-col a:hover{ color: var(--accent-cyan); }
 
-/* Newsletter — même rendu que sur la home (le style actuel de home.css) */
 .newsletter-input{
   background: rgba(255,255,255,0.05);
   border: 1px solid var(--border-tech);
