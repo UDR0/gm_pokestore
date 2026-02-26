@@ -341,8 +341,12 @@
     }
 
     .card-image img {
-        height: 80%;
+        max-height: 220px;
+        max-width: 85%;
+        height: auto;
         width: auto;
+        object-fit: contain;
+
         filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)) grayscale(0.2);
         transition: all 0.4s ease;
         z-index: 2;

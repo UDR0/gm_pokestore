@@ -165,8 +165,10 @@ if (!empty($search)) {
 
                 // Image
                 $img = trim($article['image'] ?? '');
+
                 if ($img === '') {
-                    $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png";
+                    $pokeId = (int)$article['id']; // doit correspondre au Pokédex ID
+                    $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$pokeId}.png";
                 }
 
                 $seller = $article['username'] ?? "GM Poke'Store";
