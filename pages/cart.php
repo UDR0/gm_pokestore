@@ -17,55 +17,120 @@ $result = $stmt->get_result();
 $total = 0;
 ?>
 
-<h1>Mon Panier 🛒</h1>
+<div class="cart-page-header">
+    <h1 class="cart-title">Votre Panier <span style="color: var(--text-muted)"> //</span></h1>
+    <div class="cart-subtitle">LOG_ID: BSK-9921 / SYSTÈME DE TRANSACTION SÉCURISÉ</div>
+</div>
 
-<?php if ($result->num_rows === 0): ?>
-    <p>Ton panier est vide 😢</p>
-<?php else: ?>
-    <table border="1" cellpadding="5">
-        <tr>
-            <th>Article</th>
-            <th>Prix</th>
-            <th>Quantité</th>
-            <th>Sous-total</th>
-            <th>Actions</th>
-        </tr>
+<main class="cart-container">
 
-        <?php while ($item = $result->fetch_assoc()): 
-            $subtotal = $item['price'] * $item['quantity'];
-            $total += $subtotal;
+    <section class="cart-items">
+        <?php if ($result->num_rows === 0): ?>
+            <div style="background: var(--bg-panel); padding: 28px; color: var(--text-muted);">
+                Ton panier est vide 😢
+            </div>
+        <?php else: ?>
 
-            // Récupérer le stock pour cet article
-            $stmtStock = $conn->prepare("SELECT quantity FROM stock WHERE article_id = ?");
-            $stmtStock->bind_param("i", $item['article_id']);
-            $stmtStock->execute();
-            $stockRow = $stmtStock->get_result()->fetch_assoc();
-            $maxStock = $stockRow ? $stockRow['quantity'] : 1;
-        ?>
-        <tr>
-            <td><?= htmlspecialchars($item['name']) ?></td>
-            <td><?= number_format($item['price'], 2) ?> €</td>
-            <td>
-                <form method="POST" action="actions/update_cart.php" style="display:inline;">
-                    <input type="hidden" name="cart_id" value="<?= $item['cart_id'] ?>">
-                    <input type="number" name="quantity" value="<?= $item['quantity'] ?>" min="1" max="<?= $maxStock ?>">
-                    <button type="submit">Mettre à jour</button>
-                </form>
-            </td>
-            <td><?= number_format($subtotal, 2) ?> €</td>
-            <td>
-                <form method="POST" action="actions/remove_from_cart.php" style="display:inline;">
-                    <input type="hidden" name="cart_id" value="<?= $item['cart_id'] ?>">
-                    <button type="submit">Supprimer</button>
-                </form>
-            </td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+            <?php
+            $itemsCount = 0;
+            ?>
 
-    <h3>Total : <?= number_format($total, 2) ?> €</h3>
+            <?php while ($item = $result->fetch_assoc()):
+                $subtotal = $item['price'] * $item['quantity'];
+                $total += $subtotal;
+                $itemsCount += (int)$item['quantity'];
 
-    <a href="index.php?page=confirm">
-        <button>Commander</button>
-    </a>
-<?php endif; ?>
+                // Récupérer le stock pour cet article
+                $stmtStock = $conn->prepare("SELECT quantity FROM stock WHERE article_id = ?");
+                $stmtStock->bind_param("i", $item['article_id']);
+                $stmtStock->execute();
+                $stockRow = $stmtStock->get_result()->fetch_assoc();
+                $maxStock = $stockRow ? $stockRow['quantity'] : 1;
+
+                $articleId = (int)$item['article_id'];
+                $pokeId = str_pad((string)$articleId, 3, "0", STR_PAD_LEFT);
+                $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$articleId}.png";
+            ?>
+                <article class="cart-item">
+                    <div class="item-img-box">
+                        <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($item['name']) ?>">
+                    </div>
+
+                    <div class="item-info">
+                        <div class="item-id">#<?= htmlspecialchars($pokeId) ?> // GM</div>
+                        <h3><?= htmlspecialchars($item['name']) ?></h3>
+                        <div class="slashes">////</div>
+                    </div>
+
+                    <div class="item-qty">
+                        <form method="POST" action="actions/update_cart.php" style="display:flex; align-items:center; gap:12px; margin:0;">
+                            <input type="hidden" name="cart_id" value="<?= (int)$item['cart_id'] ?>">
+
+                            <button class="qty-btn" type="button" onclick="this.nextElementSibling.stepDown(); this.closest('form').submit();">-</button>
+
+                            <input
+                                type="number"
+                                name="quantity"
+                                value="<?= (int)$item['quantity'] ?>"
+                                min="1"
+                                max="<?= (int)$maxStock ?>"
+                                style="width:64px; text-align:center; background: rgba(255,255,255,0.03); border: 1px solid var(--border-tech); color: var(--text-main); padding: 8px 10px; font-family: var(--font-tech); outline:none;"
+                            >
+
+                            <button class="qty-btn" type="button" onclick="this.previousElementSibling.stepUp(); this.closest('form').submit();">+</button>
+                        </form>
+                    </div>
+
+                    <div class="item-price"><?= number_format((float)$subtotal, 2) ?> €</div>
+
+                    <form method="POST" action="actions/remove_from_cart.php" style="margin:0;">
+                        <input type="hidden" name="cart_id" value="<?= (int)$item['cart_id'] ?>">
+                        <button type="submit" class="remove-btn" title="Supprimer">✕</button>
+                    </form>
+                </article>
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+    </section>
+
+    <aside class="cart-summary">
+        <div class="summary-title">
+            <span>Total Commande</span>
+            <span class="slashes" style="font-size: 16px;">///</span>
+        </div>
+
+        <?php if ($result->num_rows === 0): ?>
+            <div class="summary-row" style="color: var(--text-muted); font-size: 12px;">
+                <span>Articles</span>
+                <span>0 unité</span>
+            </div>
+            <div class="summary-row total">
+                <span>Sous-total</span>
+                <span style="color: var(--accent-cyan);">0.00 €</span>
+            </div>
+
+            <button class="checkout-btn" disabled style="opacity:.4; cursor:not-allowed;">Valider la commande</button>
+        <?php else: ?>
+            <div class="summary-row" style="color: var(--text-muted); font-size: 12px;">
+                <span>Articles</span>
+                <span><?= (int)$itemsCount ?> unité<?= ((int)$itemsCount > 1 ? 's' : '') ?></span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Sous-total</span>
+                <span style="color: var(--accent-cyan);"><?= number_format((float)$total, 2) ?> €</span>
+            </div>
+
+            <a href="index.php?page=confirm" style="text-decoration:none; display:block;">
+                <button class="checkout-btn" type="button">Valider la commande</button>
+            </a>
+        <?php endif; ?>
+
+        <div class="tech-details">
+            <div style="margin-bottom: 8px;">&gt; Chiffrement AES-256 actif</div>
+            <div style="margin-bottom: 8px;">&gt; Livraison via Poké-Transporter</div>
+            <div>&gt; Garantie d'authenticité certifiée</div>
+        </div>
+    </aside>
+
+</main>

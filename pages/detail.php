@@ -34,34 +34,118 @@ if (isset($_SESSION['user'])) {
 }
 ?>
 
-<h1><?= htmlspecialchars($article['name']) ?></h1>
+<?php
+$articleId = (int)$article['id'];
+$pokeId = str_pad((string)$articleId, 3, "0", STR_PAD_LEFT);
 
-<?php if (!empty($article['image'])): ?>
-    <img src="<?= htmlspecialchars($article['image']) ?>" alt="<?= htmlspecialchars($article['name']) ?>" width="150">
-<?php endif; ?>
+// Image : priorité à ton champ image, sinon artwork PokeAPI
+$img = trim($article['image'] ?? '');
+if ($img === '') {
+    $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$articleId}.png";
+}
+?>
 
-<p><?= htmlspecialchars($article['description']) ?></p>
-<p>Prix : <?= number_format($article['price'], 2) ?> €</p>
-<p>Stock disponible : <?= $stock ?></p>
+<main class="product-view">
 
-<?php if ($stock > 0): ?>
-    <?php if (isset($_SESSION['user'])): ?>
-        <form method="POST" action="actions/add_to_cart.php">
-            <input type="hidden" name="article_id" value="<?= $article['id'] ?>">
-            <button type="submit">Ajouter au panier</button>
-        </form>
-    <?php else: ?>
-        <p><a href="index.php?page=login">Connecte-toi</a> pour acheter ce Pokémon ⚡</p>
-    <?php endif; ?>
-<?php else: ?>
-    <p style="color:red;"><strong>Rupture de stock ❌</strong></p>
-<?php endif; ?>
+    <section class="product-visual">
+        <div class="visual-grid"></div>
+        <div class="pokedex-num">#<?= htmlspecialchars($pokeId) ?></div>
+        <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($article['name']) ?>" class="main-img">
+        <div class="type-corner-badge">GEN_01 // GM_POKESTORE</div>
+    </section>
 
-<?php if (isset($_SESSION['user'])): ?>
-    <form method="POST" action="actions/toggle_favorite.php" style="margin-top:10px;">
-        <input type="hidden" name="article_id" value="<?= $article['id'] ?>">
-        <button type="submit">
-            <?= $isFav ? "💔 Retirer des favoris" : "❤️ Ajouter aux favoris" ?>
-        </button>
-    </form>
-<?php endif; ?>
+    <section class="product-info">
+        <div style="margin-bottom: 10px; font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase;">
+            DATA_STREAM // SECURE_ENTRY
+        </div>
+
+        <h1 class="product-title"><?= htmlspecialchars($article['name']) ?></h1>
+
+        <!-- Badges : on n'a pas de "type" en DB, donc on met des badges neutres -->
+        <div class="badges-row">
+            <span class="badge badge-grass">GM</span>
+            <span class="badge badge-poison">KANTO</span>
+        </div>
+
+        <p class="product-desc">
+            <?= nl2br(htmlspecialchars($article['description'])) ?>
+        </p>
+
+        <!-- Stats mock (pas dans ta DB) : on garde le style sans inventer de vraies données -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-label">ID Article</span>
+                <span class="stat-value">#<?= htmlspecialchars($pokeId) ?></span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Stock</span>
+                <span class="stat-value"><?= (int)$stock ?></span>
+            </div>
+        </div>
+
+        <!-- Evolution mock (pas dans ta DB) : on garde l'esthétique en option -->
+        <div class="evolution-chain">
+            <div class="evo-title">
+                Chaîne d'évolution <div class="slashes">///</div>
+            </div>
+            <div class="evo-row">
+                <div class="evo-step">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Step 1">
+                </div>
+                <div class="evo-arrow">→</div>
+                <div class="evo-step">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Step 2">
+                </div>
+                <div class="evo-arrow">→</div>
+                <div class="evo-step active">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Step 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="purchase-section">
+            <div class="price-wrap">
+                <span class="main-price"><?= number_format((float)$article['price'], 2) ?> €</span>
+
+                <?php if ($stock > 0): ?>
+                    <span class="stock-tag">EN STOCK : <?= (int)$stock ?></span>
+                <?php else: ?>
+                    <span class="stock-tag" style="color: var(--accent-pink);">
+                        RUPTURE DE STOCK
+                    </span>
+                <?php endif; ?>
+            </div>
+
+            <div class="actions-row">
+                <?php if ($stock > 0): ?>
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <form method="POST" action="actions/add_to_cart.php" style="flex-grow:1; margin:0;">
+                            <input type="hidden" name="article_id" value="<?= $articleId ?>">
+                            <button type="submit" class="btn-buy">Ajouter au panier</button>
+                        </form>
+                    <?php else: ?>
+                        <a href="index.php?page=login" class="btn-buy" style="text-decoration:none; display:flex; align-items:center; justify-content:center;">
+                            Se connecter pour acheter
+                        </a>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <button class="btn-buy" disabled style="opacity:.4; cursor:not-allowed;">Indisponible</button>
+                <?php endif; ?>
+
+                <?php if (isset($_SESSION['user'])): ?>
+                    <form method="POST" action="actions/toggle_favorite.php" style="margin:0;">
+                        <input type="hidden" name="article_id" value="<?= $articleId ?>">
+                        <button type="submit" class="btn-fav" title="Favori">
+                            <?= $isFav ? "💔" : "♥" ?>
+                        </button>
+                    </form>
+                <?php else: ?>
+                    <a href="index.php?page=login" class="btn-fav" title="Connecte-toi pour ajouter en favori" style="text-decoration:none;">
+                        ♥
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </section>
+</main>

@@ -32,6 +32,22 @@ $isAuthPage = ($page === 'login' || $page === 'register');
     <?php if ($page === 'login'): ?>
         <link rel="stylesheet" href="assets/css/login.css">
     <?php endif; ?>
+
+    <?php if ($page === 'cart'): ?>
+        <link rel="stylesheet" href="assets/css/cart.css">
+    <?php endif; ?>
+
+    <?php if ($page === 'confirm'): ?>
+        <link rel="stylesheet" href="assets/css/confirm.css">
+    <?php endif; ?>
+
+    <?php if ($page === 'detail'): ?>
+        <link rel="stylesheet" href="assets/css/detail.css">
+    <?php endif; ?>
+    
+    <?php if ($page === 'favorites'): ?>
+        <link rel="stylesheet" href="assets/css/favorites.css">
+    <?php endif; ?>
 </head>
 
 <body>
