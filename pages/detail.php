@@ -131,9 +131,7 @@ if ($img === '') {
                 <?php if (isset($_SESSION['user'])): ?>
                     <form method="POST" action="actions/toggle_favorite.php" style="margin:0;">
                         <input type="hidden" name="article_id" value="<?= $articleId ?>">
-                        <button type="submit" class="btn-fav" title="Favori">
-                            <?= $isFav ? "💔" : "♥" ?>
-                        </button>
+                        <button type="submit" class="btn-fav<?= $isFav ? ' is-fav' : '' ?>" title="Favori">♥</button>
                     </form>
                 <?php else: ?>
                     <a href="index.php?page=login" class="btn-fav" title="Connecte-toi pour ajouter en favori" style="text-decoration:none;">
