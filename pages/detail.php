@@ -38,7 +38,6 @@ if (isset($_SESSION['user'])) {
 $articleId = (int)$article['id'];
 $pokeId = str_pad((string)$articleId, 3, "0", STR_PAD_LEFT);
 
-// Image : priorité à ton champ image, sinon artwork PokeAPI
 $img = trim($article['image'] ?? '');
 if ($img === '') {
     $img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$articleId}.png";
@@ -61,7 +60,6 @@ if ($img === '') {
 
         <h1 class="product-title"><?= htmlspecialchars($article['name']) ?></h1>
 
-        <!-- Badges : on n'a pas de "type" en DB, donc on met des badges neutres -->
         <div class="badges-row">
             <span class="badge badge-grass">GM</span>
             <span class="badge badge-poison">KANTO</span>
@@ -71,7 +69,6 @@ if ($img === '') {
             <?= nl2br(htmlspecialchars($article['description'])) ?>
         </p>
 
-        <!-- Stats mock (pas dans ta DB) : on garde le style sans inventer de vraies données -->
         <div class="stats-grid">
             <div class="stat-item">
                 <span class="stat-label">ID Article</span>
@@ -83,7 +80,6 @@ if ($img === '') {
             </div>
         </div>
 
-        <!-- Evolution mock (pas dans ta DB) : on garde l'esthétique en option -->
         <div class="evolution-chain">
             <div class="evo-title">
                 Chaîne d'évolution <div class="slashes">///</div>

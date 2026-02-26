@@ -48,6 +48,14 @@ $isAuthPage = ($page === 'login' || $page === 'register');
     <?php if ($page === 'favorites'): ?>
         <link rel="stylesheet" href="assets/css/favorites.css">
     <?php endif; ?>
+
+    <?php if ($page === 'account'): ?>
+        <link rel="stylesheet" href="assets/css/account.css">
+    <?php endif; ?>
+
+    <?php if (isset($_GET['page']) && $_GET['page'] === 'admin'): ?>
+        <link rel="stylesheet" href="assets/css/admin.css">
+    <?php endif; ?>
 </head>
 
 <body>

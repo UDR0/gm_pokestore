@@ -1,5 +1,5 @@
     <?php $page = $_GET['page'] ?? 'home'; ?>
-    <?php if ($page !== 'register' && $page !== 'login'): ?>
+    <?php if ($page !== 'register' && $page !== 'login' && $page !== 'admin'): ?>
     </div>
 
     <footer>
